@@ -5,7 +5,7 @@ export default function Company () {
 
     //create a state for our data 
 
-    const [company, setCompany] =useState({})
+    const [company, setCompany] =useState(null)
 
 
 
@@ -13,11 +13,14 @@ export default function Company () {
     useEffect(() => {
         
         const getCompany = async () => {
-        const response = await axios.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=IBM&apikey=4XJMCJSHN1P8RQPS`)
+        const response = await axios.get(`https://financialmodelingprep.com/api/v3/profile/AAPL?apikey=91c950cb2afdc944512490e8ae2113cc`)
+        
         console.log(response.data)
          //we need to set state of our data
         setCompany(response.data)
 
+        //     console.log(company)
+        // console.log(company['Meta Data'])
         }
         getCompany()
     }, [])
@@ -34,17 +37,17 @@ export default function Company () {
     } else {
         return (
             <div>
-                <h1> {company.Symbol}: {company.Name}</h1>
-                <h2>{company.Exchange}</h2>
-                <h3>{company.Description}</h3>
-                <div className='specificFinIndo'>
-                    <h4>Target Price: {company.AnalystTargetPrice}</h4>
-                    <h4>Market Cap: {company.MarketCapitalization}</h4>
-                    <h4>Gross Margin: {company.GrossProfitTTM}</h4>
+                 <h1>{company[0].symbol}: {company[0].companyName}</h1>
+                 <h3>{company[0].description}</h3>
+                 <img src={company[0].image}></img>
+                 <h3>Market Cap: {company[0].mktCap}</h3>
+                 <h3>Current Price: {company[0].price}</h3>
+                 <h3>Range: {company[0].range}</h3>
 
-                </div>
-            </div>
+             </div>
+            
         )
     }
+
 
 }

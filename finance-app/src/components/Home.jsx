@@ -1,7 +1,48 @@
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+
 export default function Home () {
-    return (
-        <div>
-            <h2>Stay up to date with U.S. Financial News</h2>
-        </div>
-    )
+
+    //create a state for our data 
+
+    const [Home, setHome] =useState(null)
+
+
+
+    //we need to call an axios function
+    useEffect(() => {
+        
+        const getHome = async () => {
+        const response = await axios.get(`https://financialmodelingprep.com/api/v3/fmp/articles?page=0&size=5&apikey=91c950cb2afdc944512490e8ae2113cc`)
+        
+        console.log(response.data)
+         //we need to set state of our data
+        setHome(response.data)
+
+        //     console.log(company)
+        // console.log(company['Meta Data'])
+        }
+        getHome()
+    }, [])
+    
+   
+
+    //we need to see the data
+    //also create a guard operator
+    //so if data takes a few seconds 
+    //site doesnt break
+
+    if (!Home) {
+        return <h2> Loading please wait</h2>
+    } else {
+        return (
+            <div>
+                <h1>{Home.content[0].title}</h1>
+
+             </div>
+            
+        )
+    }
+
+
 }
