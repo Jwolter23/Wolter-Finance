@@ -1,5 +1,7 @@
 # Wolter-Finance
 
+<img alt="NYSE" width="400px" src="./Assets/NYSE STOCKMARKET.jpg" />
+
 ## General Overview
 
 - Wolter Finacne is going to be a financial app that allows users to keep up to date on finances across the United States.
