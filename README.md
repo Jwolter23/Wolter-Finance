@@ -1,6 +1,6 @@
 # Wolter-Finance
 
-<img alt="NYSE" width="400px" src="./Assets/NYSE STOCKMARKET.jpg" />
+<img alt="NYSE" width="700px" src="./Assets/NYSE STOCKMARKET.jpg" />
 
 ## General Overview
 
