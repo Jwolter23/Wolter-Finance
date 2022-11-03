@@ -1,25 +1,25 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-export default function Finance () {
+export default function Company () {
 
     //create a state for our data 
 
-    const [finance, setFinance] =useState({})
+    const [company, setCompany] =useState({})
 
 
 
     //we need to call an axios function
     useEffect(() => {
         
-        const getFinance = async () => {
+        const getCompany = async () => {
         const response = await axios.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=IBM&apikey=4XJMCJSHN1P8RQPS`)
         console.log(response.data)
          //we need to set state of our data
-        setFinance(response.data)
+        setCompany(response.data)
 
         }
-        getFinance()
+        getCompany()
     }, [])
     
    
@@ -29,19 +29,18 @@ export default function Finance () {
     //so if data takes a few seconds 
     //site doesnt break
 
-    if (!finance) {
+    if (!company) {
         return <h2> Loading please wait</h2>
     } else {
         return (
             <div>
-                <h1> {finance.Symbol}: {finance.Name}</h1>
-                <h2>{finance.Exchange}</h2>
-                <h3>{finance.Description}</h3>
+                <h1> {company.Symbol}: {company.Name}</h1>
+                <h2>{company.Exchange}</h2>
+                <h3>{company.Description}</h3>
                 <div className='specificFinIndo'>
-                    <h4>Target Price: {finance.AnalystTargetPrice}</h4>
-                    <h4>Market Cap: {finance.MarketCapitalization}</h4>
-                    <h4>Gross Margin: {finance.GrossProfitTTM}</h4>
-                   
+                    <h4>Target Price: {company.AnalystTargetPrice}</h4>
+                    <h4>Market Cap: {company.MarketCapitalization}</h4>
+                    <h4>Gross Margin: {company.GrossProfitTTM}</h4>
 
                 </div>
             </div>
