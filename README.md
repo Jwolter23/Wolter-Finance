@@ -47,6 +47,11 @@
 - Link to Trello attached below
   [Link to trello](https://trello.com/b/17KqBuWN/project2)
 
+## Component Hierarchy
+
+-Link to Component Hierarchy attached below
+[Link to Figma](https://www.figma.com/file/jSIB4QmzVyQlgOfdKb3Bze/Untitled?node-id=0%3A1)
+
 ## Working API call
 
 - Picture of API call producing data from Insomnia attached below
