@@ -11,8 +11,9 @@ export default function Finance () {
 
     //we need to call an axios function
     useEffect(() => {
+        
         const getFinance = async () => {
-        const response = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=META&apikey=4XJMCJSHN1P8RQPS`)
+        const response = await axios.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=IBM&apikey=4XJMCJSHN1P8RQPS`)
         console.log(response.data)
          //we need to set state of our data
         setFinance(response.data)
@@ -23,11 +24,7 @@ export default function Finance () {
     
    
 
-
     //we need to see the data
-    console.log(finance)
-
-
     //also create a guard operator
     //so if data takes a few seconds 
     //site doesnt break
@@ -37,7 +34,14 @@ export default function Finance () {
     } else {
         return (
             <div>
-                <h2>Tiker: {finance.symbol}</h2>
+                <h1> {finance.Symbol}: {finance.Name}</h1>
+                <h2>{finance.Exchange}</h2>
+                <h3>{finance.Description}</h3>
+                <div className='specificFinIndo'>
+                    <h4>Target Price: {finance.AnalystTargetPrice}</h4>
+                    <h4>Market Cap: {finance.MarketCapitalization}</h4>
+
+                </div>
             </div>
         )
     }
