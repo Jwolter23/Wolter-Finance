@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const CompanyDetails = (props) => {
 
@@ -15,7 +16,7 @@ const CompanyDetails = (props) => {
         
     }, [props.company, index])
     return companyDetail ? (
-        
+        <div>
         <div className='specificCompDetail'>
             <h1>{companyDetail.symbol}: {companyDetail.companyName}</h1>
             <h3>{companyDetail.description}</h3>
@@ -23,7 +24,14 @@ const CompanyDetails = (props) => {
             <h3>Market Cap: {companyDetail.mktCap}</h3>
             <h3>Current Price: {companyDetail.price}</h3>
             <h3>Range: {companyDetail.range}</h3>
+            
         </div>
+        <div className='backButtonWrap'>
+                <button><Link to='/company'>Back</Link></button>
+            </div>
+        </div>
+            
+       
     ) : (<h1>Loading...</h1>)
 }
 
