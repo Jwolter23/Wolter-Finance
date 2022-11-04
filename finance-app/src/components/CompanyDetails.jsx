@@ -10,13 +10,13 @@ const CompanyDetails = (props) => {
     useEffect(() => {
         let selectedCompany = props.company[index]
         setCompanyDetail(selectedCompany)
-        console.log(companyDetail)
+        
     }, [props.company, index])
     return companyDetail ? (
         <div className='specificCompDetail'>
             <h1>{companyDetail.symbol}: {companyDetail.companyName}</h1>
             <h3>{companyDetail.description}</h3>
-            <img src={companyDetail.image}></img>
+            <img src={companyDetail.image} alt=''></img>
             <h3>Market Cap: {companyDetail.mktCap}</h3>
             <h3>Current Price: {companyDetail.price}</h3>
             <h3>Range: {companyDetail.range}</h3>
