@@ -5,8 +5,9 @@ export default function Nav () {
         <div className='navLinks'>
             <Link to='/' className='linkz'>Home</Link>
             <Link to ='/company' className='linkz'>Company</Link>
-            <Link to ='/finance' className='linkz'>Finance</Link>
             <Link to ='/stocks' className='linkz'>Stocks</Link>
+            <Link to ='/finance' className='linkz'>Finance</Link>
+            
         </div>
     )
 }
