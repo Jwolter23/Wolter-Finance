@@ -33,3 +33,14 @@ a:hover{
     align-items: center;
     
 }
+
+.storyGrid{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+.story0:hover,.story1:hover,.story2:hover,.story3:hover,.story4:hover,.story5:hover{
+    color: rgb(87, 145, 238);
+    cursor: pointer;
+}
