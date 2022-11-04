@@ -13,3 +13,11 @@ a {
 a:hover{
     color:burlywood;
 }
+.CompanyTitle{
+    border: 2px solid black;
+}
+.CompanyTitle:hover{
+    cursor: pointer;
+    color: darkkhaki;
+    
+}
