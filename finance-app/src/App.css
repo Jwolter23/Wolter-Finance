@@ -2,3 +2,15 @@
     display: flex;
     justify-content: space-around;
 }
+.wolterHeader{
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color:burlywood;
+}
+

@@ -5,8 +5,8 @@
 ## General Overview
 
 - Wolter Finacne is going to be a financial app that allows users to keep up to date on finances across the United States.
-- To begin and get all my information, I plan on using the Alpha Vantage API which can be accessed from the link below.
-- API (https://www.alphavantage.co/documentation/)
+- To begin and get all my information, I plan on using the Financial Modeling Prep API which can be accessed from the link below.
+- API (https://site.financialmodelingprep.com/developer/docs/#FMP-Articles)
 - The inspiration for my project comes from Yahoo Finance, and while there are certainly similarities Wolter Finance has it's own twist.
 - Users will be greeted on our landing page which will show four tabs each leading to different parts our our website.
 - Home tab will take them to current financial news stories. Ranging from crypto, housing market, currency exchange, interest rates etc.
@@ -25,7 +25,7 @@
 
 ## Logic and Tech
 
-- As mentioned before the brains of the operation will be using the Alpha Vantage API.
+- As mentioned before the brains of the operation will be using the Financial Modeling Prep API.
 - With this API using axios and react is really how we are going to combine all the information recieved and rendered on screen.
 - Utilizing componenets to keep our information seperate is also going to be extremley important.
 - As of now there will be four seperate components that were listed above in the General Overview section.
