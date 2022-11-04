@@ -5,6 +5,12 @@
 .wolterHeader{
     text-align: center;
 }
+
+.story0:hover,.story1:hover,.story2:hover,.story3:hover,.story4:hover,.story5:hover{
+    color: rgb(87, 145, 238);
+    cursor: pointer;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -13,6 +19,7 @@ a {
 a:hover{
     color:burlywood;
 }
+
 .CompanyTitle{
     border: 2px solid black;
     width: 200px;
@@ -32,15 +39,13 @@ a:hover{
     height: 700px;
     align-items: center;
     
+    
 }
 
 .storyGrid{
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
+   
 }
 
-.story0:hover,.story1:hover,.story2:hover,.story3:hover,.story4:hover,.story5:hover{
-    color: rgb(87, 145, 238);
-    cursor: pointer;
-}
