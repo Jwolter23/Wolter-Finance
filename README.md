@@ -55,4 +55,4 @@
 ## Working API call
 
 - Picture of API call producing data from Insomnia attached below
-  <img alt="Assets" width="500px" src="./Assets/API.png" />
+  <img alt="Assets" width="500px" src="./Assets/NewAPI.png" />
