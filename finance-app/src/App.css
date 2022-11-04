@@ -1,6 +1,7 @@
 .navLinks{
     display: flex;
     justify-content: space-around;
+    
 }
 .wolterHeader{
     text-align: center;
@@ -11,12 +12,12 @@
     cursor: pointer;
 }
 
-a {
+.linkz {
     text-decoration: none;
     color: black;
 }
 
-a:hover{
+.linkz:hover{
     color:burlywood;
 }
 
@@ -49,3 +50,11 @@ a:hover{
    
 }
 
+.alink{
+    text-decoration: none;
+    color: black;
+}
+
+.alink:hover{
+    color: rgb(80, 164, 237);
+}

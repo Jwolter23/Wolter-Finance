@@ -7,12 +7,15 @@ const CompanyDetails = (props) => {
 
     const [companyDetail, setCompanyDetail] = useState('')
 
+    
+
     useEffect(() => {
         let selectedCompany = props.company[index]
         setCompanyDetail(selectedCompany)
         
     }, [props.company, index])
     return companyDetail ? (
+        
         <div className='specificCompDetail'>
             <h1>{companyDetail.symbol}: {companyDetail.companyName}</h1>
             <h3>{companyDetail.description}</h3>

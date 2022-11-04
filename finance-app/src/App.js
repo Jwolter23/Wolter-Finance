@@ -8,23 +8,13 @@ import axios from 'axios'
 function App() {
 
 const multiCo = [
-  'AAPL',
-  'AMZN',
-  'ROKU',
-  'IBM',
-  'TSLA',
-  'MSFT',
-  'GOOGL',
-  'BRK.A',
-  'NVDA',
-  'TSM',
-  'META',
-  'UNH',
-  'JNJ',
-  'V',
-  'WMT'
+  'AAPL','AMZN','ROKU','IBM','TSLA','MSFT','GOOGL','BRK.A','NVDA','TSM','META','UNH',
+  'JNJ','V','WMT','XOM','JPM','CVX','LLY','PG','MA','TCEHY','BAC','HD','PFE','KO','MRK','ABBV','PEP','MCD'
 ]
 
+let alph = () => {
+  setCompany([...company].sort((a, b) => a.item > b.item ? 1 : -1 ))
+} 
 
   const [company, setCompany] =useState(null)
 
@@ -46,9 +36,6 @@ const multiCo = [
 
 
 
-
-
-
   return (
     <div className="App">
       <div>
@@ -56,7 +43,10 @@ const multiCo = [
       </div>
 
       <div>
-        <Main company={company}/>
+      
+
+        <Main company={company}
+              alph={alph}/>
       </div>
 
       <div>

@@ -38,36 +38,42 @@ export default function Home () {
         return (
         <div className='storyGrid'>
             <div className='story0'>
+                <a href={Home[0].url}target='_blank' className='alink'>
                 <h1>{Home[0].title}</h1>
                 <h3> {Home[0].site}, {Home[0].publishedDate}, {Home[0].symbol}</h3>
-               <a href={Home[0].url}target='_blank'><img src={Home[0].image}></img></a> 
+               <img src={Home[0].image}></img></a> 
                 
              </div>
              <div className='story1'>
+             <a href={Home[1].url}target='_blank' className='alink'>
              <h1>{Home[1].title}</h1>
                 <h3>{Home[1].site}, {Home[1].publishedDate},     {Home[1].symbol}</h3>
-                <a href={Home[1].url}target='_blank'><img src={Home[1].image}></img></a>
+                <img src={Home[1].image}></img></a>
                 
              </div> 
              <div className='story2'>
+             <a href={Home[2].url}target='_blank' className='alink'>
              <h1>{Home[2].title}</h1>
                 <h3>{Home[2].site},  {Home[2].publishedDate},    {Home[2].symbol}</h3>
-                <a href={Home[2].url}target='_blank'><img src={Home[2].image}></img></a>
+                <img src={Home[2].image}></img></a>
              </div> 
-             <div className='story3'>
+             <div className='story3' >
+             <a href={Home[3].url}target='_blank' className='alink'>
              <h1>{Home[3].title}</h1>
                 <h3>{Home[3].site},  {Home[3].publishedDate},    {Home[3].symbol}</h3>
-                <a href={Home[3].url}target='_blank'><img src={Home[3].image}></img></a>
+                <img src={Home[3].image}></img></a>
              </div> 
              <div className='story4'>
+             <a href={Home[4].url}target='_blank' className='alink'>
              <h1>{Home[4].title}</h1>
                 <h3>{Home[4].site},  {Home[4].publishedDate},    {Home[4].symbol}</h3>
-                <a href={Home[4].url}target='_blank'><img src={Home[4].image}></img></a>
+                <img src={Home[4].image}></img></a>
              </div> 
              <div className='story5'>
+             <a href={Home[5].url}target='_blank' className='alink'>
              <h1>{Home[5].title}</h1>
                 <h3>{Home[5].site},  {Home[5].publishedDate},    {Home[5].symbol}</h3>
-                <a href={Home[5].url}target='_blank'><img src={Home[5].image}></img></a>
+                <img src={Home[5].image}></img></a>
              </div> 
         </div>    
         )
