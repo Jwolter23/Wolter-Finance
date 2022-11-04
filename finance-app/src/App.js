@@ -7,6 +7,24 @@ import axios from 'axios'
 
 function App() {
 
+const multiCo = [
+  'AAPL',
+  'AMZN',
+  'ROKU',
+  'IBM',
+  'TSLA',
+  'MSFT',
+  'GOOGL',
+  'BRK.A',
+  'NVDA',
+  'TSM',
+  'META',
+  'UNH',
+  'JNJ',
+  'V',
+  'WMT'
+]
+
 
   const [company, setCompany] =useState(null)
 
@@ -14,8 +32,8 @@ function App() {
   useEffect(() => {
       
       const getCompany = async () => {
-      const response = await axios.get(`https://financialmodelingprep.com/api/v3/profile/AAPL?apikey=91c950cb2afdc944512490e8ae2113cc`)
-      
+      const response = await axios.get(`https://financialmodelingprep.com/api/v3/profile/${multiCo}?apikey=91c950cb2afdc944512490e8ae2113cc`)
+     
       console.log(response.data)
        //we need to set state of our data
       setCompany(response.data)

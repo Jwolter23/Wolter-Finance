@@ -36,13 +36,20 @@ export default function Home () {
         return <h2> Loading please wait</h2>
     } else {
         return (
-            <div>
+        <div>
+            <div className='story0'>
                 <h1>{Home.content[0].title}</h1>
                 <h3>{Home.content[0].author},  {Home.content[0].date}, {Home.content[0].tickers}</h3>
                 <p>{Home.content[0].content}</p>
                 <img src={Home.content[0].image} alt=''></img>
              </div>
-            
+             <div className='story0'>
+                <h1>{Home.content[1].title}</h1>
+                <h3>{Home.content[1].author},  {Home.content[1].date}, {Home.content[1].tickers}</h3>
+                <p>{Home.content[1].content}</p>
+                <img src={Home.content[1].image} alt=''></img>
+             </div>
+        </div>    
         )
     }
 

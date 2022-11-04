@@ -5,7 +5,7 @@ export default function Stocks () {
 
     //create a state for our data 
 
-    const [stocks, setStocks] =useState({})
+    const [stocks, setStocks] =useState(null)
 
 
 
@@ -13,7 +13,7 @@ export default function Stocks () {
     useEffect(() => {
         
         const getStocks = async () => {
-        const response = await axios.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=ROKU&apikey=4XJMCJSHN1P8RQPS`)
+        const response = await axios.get(`https://financialmodelingprep.com/api/v3/quote-short/AAPL?apikey=91c950cb2afdc944512490e8ae2113cc`)
         
         console.log(response.data)
          //we need to set state of our data
@@ -35,15 +35,10 @@ export default function Stocks () {
     } else {
         return (
             <div>
-                <h1> {stocks.Symbol}: {stocks.Name}</h1>
-                <h2>{stocks.Exchange}</h2>
-                <h3>{stocks.Description}</h3>
-                <div className='specificFinIndo'>
-                    <h4>Target Price: {stocks.AnalystTargetPrice}</h4>
-                    <h4>Market Cap: {stocks.MarketCapitalization}</h4>
-                    <h4>Gross Margin: {stocks.GrossProfitTTM}</h4>
+                <h1> {stocks[0].symbol}: {stocks[0].price} </h1>
+                <h2>{stocks[0].volume}</h2>
 
-                </div>
+                
             </div>
         )
     }
