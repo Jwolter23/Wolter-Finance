@@ -38,7 +38,9 @@ export default function Home () {
         return (
             <div>
                 <h1>{Home.content[0].title}</h1>
-
+                <h3>{Home.content[0].author},  {Home.content[0].date}, {Home.content[0].tickers}</h3>
+                <p>{Home.content[0].content}</p>
+                <img src={Home.content[0].image}></img>
              </div>
             
         )
