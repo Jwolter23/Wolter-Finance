@@ -5,7 +5,9 @@ import './App.css';
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
+
 function App() {
+
 
 const multiCo = [
   'AAPL','AMZN','ROKU','IBM','TSLA','MSFT','GOOGL','BRK.A','NVDA','TSM','META','UNH',
@@ -38,6 +40,7 @@ let alph = () => {
 
   return (
     <div className="App">
+      
       <div>
         <Header />
       </div>
