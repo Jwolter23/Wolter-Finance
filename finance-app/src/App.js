@@ -68,14 +68,12 @@ let alph = () => {
       </div>
 
       <div>
-      <form onSubmit={handleSubmit}>
-      <label htmlFor='searcg'>Search: </label>
-      <input type='text' id='search' onChange={handleChange} value={formState.search}></input>
-      <button type='submit'>Send</button>
-      </form>
-
         <Main company={company}
-              alph={alph}/>
+              alph={alph}
+              initialState={initialState}
+              handleChange={handleChange}
+              handleSubmit={handleSubmit}
+              formState={formState}/>
       </div>
 
       <div>

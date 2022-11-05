@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-export default function Finance () {
+
+export default function Finance (props) {
 
     //create a state for our data 
 
@@ -41,6 +42,14 @@ export default function Finance () {
                     <h4>Target Price: {finance.AnalystTargetPrice}</h4>
                     <h4>Market Cap: {finance.MarketCapitalization}</h4>
                     <h4>Gross Margin: {finance.GrossProfitTTM}</h4>
+
+
+
+                    <form onSubmit={props.handleSubmit}>
+                        <label htmlFor='searcg'>Search: </label>
+                        <input type='text' id='search' onChange={props.handleChange} value={props.formState.search}></input>
+                        <button type='submit'>Send</button>
+                    </form>
                    
 
                 </div>
