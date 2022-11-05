@@ -9,6 +9,28 @@ import axios from 'axios'
 function App() {
 
 
+  const initialState = {
+    search: '',
+  }
+  
+  const [formState, setFormState] = useState(initialState)
+  
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    console.log(formState)
+    setFormState(initialState)
+  }
+  
+  const handleChange = (event) => {
+    setFormState({...formState, [event.target.id]: event.target.value})
+  }
+
+
+
+
+
+
+
 const multiCo = [
   'AAPL','AMZN','ROKU','IBM','TSLA','MSFT','GOOGL','BRK.A','NVDA','TSM','META','UNH',
   'JNJ','V','WMT','XOM','JPM','CVX','LLY','PG','MA','TCEHY','BAC','HD','PFE','KO','MRK','ABBV','PEP','MCD'
@@ -46,7 +68,11 @@ let alph = () => {
       </div>
 
       <div>
-      
+      <form onSubmit={handleSubmit}>
+      <label htmlFor='searcg'>Search: </label>
+      <input type='text' id='search' onChange={handleChange} value={formState.search}></input>
+      <button type='submit'>Send</button>
+      </form>
 
         <Main company={company}
               alph={alph}/>
