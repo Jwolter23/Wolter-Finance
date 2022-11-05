@@ -6,15 +6,16 @@ export default function Finance (props) {
 
     //create a state for our data 
 
-    const [finance, setFinance] =useState({})
-
+    const [finance, setFinance] =useState(null)
+    
+    
 
 
     //we need to call an axios function
     useEffect(() => {
         
         const getFinance = async () => {
-        const response = await axios.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=IBM&apikey=4XJMCJSHN1P8RQPS`)
+        const response = await axios.get(`https://financialmodelingprep.com/api/v3/search-ticker?query=WMT&limit=10&exchange=NYSE&apikey=91c950cb2afdc944512490e8ae2113cc`)
         console.log(response.data)
          //we need to set state of our data
         setFinance(response.data)
@@ -23,7 +24,7 @@ export default function Finance (props) {
         getFinance()
     }, [])
     
-   
+   // WANNA USE INITIALSTATE.SEARCH AS AN OBJECT LITERAL IN THE API TO CHANGE THE SEARCH INFO WHEN INFO IS ENTERED IN SEARCH BAR 
 
     //we need to see the data
     //also create a guard operator
@@ -35,14 +36,7 @@ export default function Finance (props) {
     } else {
         return (
             <div>
-                <h1> {finance.Symbol}: {finance.Name}</h1>
-                <h2>{finance.Exchange}</h2>
-                <h3>{finance.Description}</h3>
-                <div className='specificFinIndo'>
-                    <h4>Target Price: {finance.AnalystTargetPrice}</h4>
-                    <h4>Market Cap: {finance.MarketCapitalization}</h4>
-                    <h4>Gross Margin: {finance.GrossProfitTTM}</h4>
-
+                <h1>{finance[0].symbol}: {finance[0].name}</h1>
 
 
                     <form onSubmit={props.handleSubmit}>
@@ -51,8 +45,6 @@ export default function Finance (props) {
                         <button type='submit'>Send</button>
                     </form>
                    
-
-                </div>
             </div>
         )
     }
