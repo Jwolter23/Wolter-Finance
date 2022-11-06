@@ -25,6 +25,8 @@
     border: 2px solid black;
     width: 200px;
     text-align: center;
+    width: fit-content;
+    height: fit-content;
 
 }
 .CompanyTitle:hover{
@@ -37,7 +39,7 @@
     display: grid;
     grid-template-columns: auto auto auto;
     justify-items: center;
-    height: 700px;
+    height: 600px;
     align-items: center;
     
     
@@ -57,4 +59,9 @@
 
 .alink:hover{
     color: rgb(80, 164, 237);
+}
+
+.borderImg{
+    width: 300px;
+    height: 250px;
 }

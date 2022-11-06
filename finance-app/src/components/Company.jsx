@@ -21,7 +21,7 @@ const Company = (props) => {
         
         <div key={index}
                 className='companyNames'>
-        <h2 className="CompanyTitle" onClick={() => showComp(index)} >{com.symbol}</h2>
+        <h2 className="CompanyTitle" onClick={() => showComp(index)} >{com.symbol} <br /><img src={com.image} className='borderImg'></img></h2>
        
         </div>
        ))
@@ -32,6 +32,7 @@ const Company = (props) => {
     )
 }
 }
+
 
 
 
