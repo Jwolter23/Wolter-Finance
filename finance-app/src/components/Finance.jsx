@@ -8,41 +8,44 @@ export default function Finance (props) {
 
     const [finance, setFinance] =useState(null)
     
-    
+   
 
 
     //we need to call an axios function
-    useEffect(() => {
-        
-        const getFinance = async () => {
-        const response = await axios.get(`https://financialmodelingprep.com/api/v3/search-ticker?query=WMT&limit=10&exchange=NYSE&apikey=91c950cb2afdc944512490e8ae2113cc`)
+  
+
+    const getFinance = async () => {
+        const response = await axios.get(`https://financialmodelingprep.com/api/v3/search-ticker?query=${props.formState.search}&limit=10&exchange=NYSE&apikey=91c950cb2afdc944512490e8ae2113cc`)
         console.log(response.data)
          //we need to set state of our data
         setFinance(response.data)
 
         }
-        getFinance()
-    }, [])
     
-   // WANNA USE INITIALSTATE.SEARCH AS AN OBJECT LITERAL IN THE API TO CHANGE THE SEARCH INFO WHEN INFO IS ENTERED IN SEARCH BAR 
-
+    //will only take NYSE or NASDAQ but not both
+   
     //we need to see the data
     //also create a guard operator
     //so if data takes a few seconds 
     //site doesnt break
 
     if (!finance) {
-        return <h2> Loading please wait</h2>
+        return   <form onSubmit={props.handleSubmit}>
+        <label htmlFor='search'>Search: </label>
+        <input type='text' id='search' onChange={props.handleChange} value={props.formState.search}></input>
+        <button type='submit' onClick={getFinance}>Send</button>
+                </form>
+        
     } else {
         return (
             <div>
-                <h1>{finance[0].symbol}: {finance[0].name}</h1>
+                <h1>{finance[0].symbol}: {finance[0].name} </h1>
 
 
                     <form onSubmit={props.handleSubmit}>
-                        <label htmlFor='searcg'>Search: </label>
+                        <label htmlFor='search'>Search Tiker: </label>
                         <input type='text' id='search' onChange={props.handleChange} value={props.formState.search}></input>
-                        <button type='submit'>Send</button>
+                        <button type='submit' onClick={getFinance}>Send</button>
                     </form>
                    
             </div>

@@ -13,8 +13,6 @@ function App() {
     search: '',
   }
   
-  
-
   const [formState, setFormState] = useState(initialState)
   
   const handleSubmit = (event) => {
@@ -26,10 +24,6 @@ function App() {
   const handleChange = (event) => {
     setFormState({...formState, [event.target.id]: event.target.value})
   }
-
-
-
-
 
 
 
