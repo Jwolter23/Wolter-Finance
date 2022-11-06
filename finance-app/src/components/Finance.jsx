@@ -15,12 +15,15 @@ export default function Finance (props) {
   
 
     const getFinance = async () => {
-        const response = await axios.get(`https://financialmodelingprep.com/api/v3/search-ticker?query=${props.formState.search}&limit=10&exchange=NYSE&apikey=91c950cb2afdc944512490e8ae2113cc`)
+        const response = await axios.get(`https://financialmodelingprep.com/api/v3/quote/${props.formState.search.toUpperCase()}?apikey=91c950cb2afdc944512490e8ae2113cc`)
         console.log(response.data)
          //we need to set state of our data
         setFinance(response.data)
 
         }
+
+        
+        
     
     //will only take NYSE or NASDAQ but not both
    
@@ -40,6 +43,10 @@ export default function Finance (props) {
         return (
             <div>
                 <h1>{finance[0].symbol}: {finance[0].name} </h1>
+                <h2>Price: {finance[0].price} </h2>
+                <h3>Change: {finance[0].change}, {finance[0].changesPercentage}%</h3>
+                <h3>Day High: {finance[0].dayHigh}</h3>
+                <h3>Day Low: {finance[0].dayLow}</h3>
 
 
                     <form onSubmit={props.handleSubmit}>
