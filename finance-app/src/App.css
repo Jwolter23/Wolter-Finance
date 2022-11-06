@@ -27,6 +27,7 @@
     text-align: center;
     width: fit-content;
     height: fit-content;
+    margin: 20px;
 
 }
 .CompanyTitle:hover{
@@ -37,11 +38,10 @@
 }
 .grid{
     display: grid;
-    grid-template-columns: auto auto auto;
-    justify-items: center;
-    height: 600px;
-    align-items: center;
-    
+    grid-template-columns: auto auto;
+    height: 650px;
+    width: 800px;
+    overflow-y: scroll;
     
 }
 
@@ -64,4 +64,11 @@
 .borderImg{
     width: 300px;
     height: 250px;
+}
+
+.gridAlign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
 }

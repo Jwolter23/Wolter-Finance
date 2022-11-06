@@ -14,21 +14,26 @@ const Company = (props) => {
     
     return (
         
-    <div className="grid">
-         
-        {
-       props.company.map((com, index) => (
+    <div className='gridAlign'>
         
-        <div key={index}
-                className='companyNames'>
-        <h2 className="CompanyTitle" onClick={() => showComp(index)} >{com.symbol} <br /><img src={com.image} className='borderImg'></img></h2>
-       
-        </div>
-       ))
-}
-<button onClick={props.alph} className='sortListA'>Sort List A to Z</button>
+        <div className="grid">
+            
+            
+            {
+        props.company.map((com, index) => (
+            
+            <div key={index}
+                    className='companyNames'>
+            <h2 className="CompanyTitle" onClick={() => showComp(index)} >{com.symbol} <br /><img src={com.image} className='borderImg'></img></h2>
+        
+            </div>
+        ))
+    }
+    
 
-       </div>
+        </div>
+        <button onClick={props.alph} className='sortListA'>Sort List A to Z</button>
+    </div>
     )
 }
 }
