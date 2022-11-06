@@ -23,11 +23,9 @@
 
 .CompanyTitle{
     border: 2px solid black;
+    /* width: auto; */
     width: 200px;
     text-align: center;
-    width: fit-content;
-    height: fit-content;
-    margin: 20px;
 
 }
 .CompanyTitle:hover{
@@ -37,11 +35,18 @@
     
 }
 .grid{
+    box-sizing: border-box;
     display: grid;
-    grid-template-columns: auto auto;
-    height: 650px;
-    width: 800px;
+   
+    grid-template-columns: auto auto auto;
+    height: 800px;
+    width: 1200px;
     overflow-y: scroll;
+    gap: 25px;
+    margin-top: 50px;
+    border: 1px solid black;
+    justify-content: center;
+    justify-content: space-around;
     
 }
 
@@ -49,6 +54,7 @@
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
+    
    
 }
 
@@ -62,13 +68,14 @@
 }
 
 .borderImg{
-    width: 300px;
-    height: 250px;
+   max-width: 100%;
+   max-height: 100%;
 }
 
 .gridAlign{
     display: flex;
     justify-content: center;
     align-items: center;
+    
    
 }
