@@ -1,7 +1,7 @@
-.navLinks{
+.navlinks2{
+    width: auto;
     display: flex;
     justify-content: space-around;
-    
 }
 .wolterHeader{
     text-align: center;
@@ -15,6 +15,10 @@
 .linkz {
     text-decoration: none;
     color: black;
+    display: flex;
+    justify-content: space-around;
+    
+    
 }
 
 .linkz:hover{
@@ -149,4 +153,9 @@
 }
 .sectorTitleChange{
     margin-right: 10px;
+}
+
+.markets{
+    display: flex;
+    justify-content: space-around;
 }
