@@ -36,21 +36,16 @@ export default function Home () {
         setSector(response.data)
         }
         getSector()
+
+
     }, [])
  
-   //  if (sector.changePercentage.includes('-')){
-   //    sector.changePercentage.style.color = 'red'
-   //  } else {
-   //    sector.changePercentage.style.color = 'green'
-   //  }
-
-
     //we need to see the data
     //also create a guard operator
     //so if data takes a few seconds 
     //site doesnt break
 
-    if (!Home) {
+    if (!Home && !sector) {
         return <h2> Loading please wait</h2>
     } else {
         return (
@@ -106,17 +101,27 @@ export default function Home () {
 
                <div className='sectorReport'>
                   <h1 className='sectorTitle'>Daily Sector Report</h1>
-                  <h2>{sector[11].sector}: {sector[11].changesPercentage}</h2>
-                  <h2>{sector[7].sector}: {sector[7].changesPercentage}</h2>
-                  <h2>{sector[6].sector}: {sector[6].changesPercentage}</h2>
-                  <h2>{sector[10].sector}: {sector[10].changesPercentage}</h2>
-                  <h2>{sector[8].sector}: {sector[8].changesPercentage}</h2>
-                  <h2>{sector[5].sector}: {sector[5].changesPercentage}</h2>
-                  <h2>{sector[4].sector}: {sector[4].changesPercentage}</h2>
-                  <h2>{sector[1].sector}: {sector[1].changesPercentage}</h2>
-                  <h2>{sector[3].sector}: {sector[3].changesPercentage}</h2>
-                  <h2>{sector[2].sector}: {sector[2].changesPercentage}</h2>
-                  <h2>{sector[9].sector}: {sector[9].changesPercentage}</h2>
+                  <h2 className={sector[11].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[11].sector}: {sector[11].changesPercentage}</h2>
+
+                  <h2 className={sector[7].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[7].sector}: {sector[7].changesPercentage}</h2>
+
+                  <h2 className={sector[6].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[6].sector}: {sector[6].changesPercentage}</h2>
+
+                  <h2 className={sector[10].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[10].sector}: {sector[10].changesPercentage}</h2>
+
+                  <h2 className={sector[8].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[8].sector}: {sector[8].changesPercentage}</h2>
+
+                  <h2 className={sector[5].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[5].sector}: {sector[5].changesPercentage}</h2>
+
+                  <h2 className={sector[4].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[4].sector}: {sector[4].changesPercentage}</h2>
+
+                  <h2 className={sector[1].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[1].sector}: {sector[1].changesPercentage}</h2>
+
+                  <h2 className={sector[3].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[3].sector}: {sector[3].changesPercentage}</h2>
+
+                  <h2 className={sector[2].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[2].sector}: {sector[2].changesPercentage}</h2>
+
+                  <h2 className={sector[9].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[9].sector}: {sector[9].changesPercentage}</h2>
                </div>
              
 

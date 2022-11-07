@@ -114,7 +114,12 @@
 .alink1{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    text-decoration: none;
+    color: black;
     
+}
+.alink1:hover{
+    color: rgb(80, 164, 237);
 }
 .storyText{
     color: black;
@@ -131,4 +136,10 @@
 }
 .storyImg1{
     grid-column: 1;
+}
+.negative{
+    color: red;
+}
+.positive{
+    color: green;
 }
