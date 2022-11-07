@@ -23,8 +23,27 @@ export default function Home () {
         getHome()
     }, [])
     
-   
-    
+
+
+    const [sector, setSector] =useState(null)
+ 
+    useEffect(() => {
+       
+        const getSector = async () => {
+        const response = await axios.get(`https://financialmodelingprep.com/api/v3/sector-performance?apikey=91c950cb2afdc944512490e8ae2113cc`)
+       
+        console.log(response.data)
+        setSector(response.data)
+        }
+        getSector()
+    }, [])
+ 
+   //  if (sector.changePercentage.includes('-')){
+   //    sector.changePercentage.style.color = 'red'
+   //  } else {
+   //    sector.changePercentage.style.color = 'green'
+   //  }
+
 
     //we need to see the data
     //also create a guard operator
@@ -37,19 +56,20 @@ export default function Home () {
         return (
         <div className='storyGrid'>
             
-            <div className='story0'>
+            {/* <div className='story0'>
                 <a href={Home[0].url}target='_blank' className='alink'>
                 <h1 className='storyTitle'>{Home[0].title}</h1>
                 <h3 className='storyInfo'> {Home[0].site}, {Home[0].publishedDate}, {Home[0].symbol}</h3>
                <img className='storyImg0' src={Home[0].image}></img></a> 
             
             
-             </div>
+             </div> */}
              <div className='story1'>
-             <a href={Home[1].url}target='_blank' className='alink'>
-             <h1 className='storyTitle'>{Home[1].title}</h1>
-                <h3 className='storyInfo'>{Home[1].site}, {Home[1].publishedDate},     {Home[1].symbol}</h3>
-                <img className='storyImg' src={Home[1].image}></img></a>
+             <a href={Home[1].url}target='_blank' className='alink1'>
+             <h1 className='storyTitle1'>{Home[1].title}</h1>
+                <h3 className='storyInfo1'>{Home[1].site}, {Home[1].publishedDate},     {Home[1].symbol}</h3>
+                <img className='storyImg1' src={Home[1].image}></img>
+                <p className='storyText'>{Home[1].text}</p></a>
                 
              </div> 
              <div className='story2'>
@@ -84,7 +104,20 @@ export default function Home () {
                 <img className='storyImg' src={Home[6].image}></img></a>
              </div> 
 
-           
+               <div className='sectorReport'>
+                  <h1 className='sectorTitle'>Daily Sector Report</h1>
+                  <h2>{sector[11].sector}: {sector[11].changesPercentage}</h2>
+                  <h2>{sector[7].sector}: {sector[7].changesPercentage}</h2>
+                  <h2>{sector[6].sector}: {sector[6].changesPercentage}</h2>
+                  <h2>{sector[10].sector}: {sector[10].changesPercentage}</h2>
+                  <h2>{sector[8].sector}: {sector[8].changesPercentage}</h2>
+                  <h2>{sector[5].sector}: {sector[5].changesPercentage}</h2>
+                  <h2>{sector[4].sector}: {sector[4].changesPercentage}</h2>
+                  <h2>{sector[1].sector}: {sector[1].changesPercentage}</h2>
+                  <h2>{sector[3].sector}: {sector[3].changesPercentage}</h2>
+                  <h2>{sector[2].sector}: {sector[2].changesPercentage}</h2>
+                  <h2>{sector[9].sector}: {sector[9].changesPercentage}</h2>
+               </div>
              
 
         </div>    

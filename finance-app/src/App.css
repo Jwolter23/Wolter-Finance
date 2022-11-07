@@ -53,18 +53,27 @@
 .storyGrid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    margin: 10px;
+    gap: 2em;
+    margin: 2em;
     margin-top: 40px;
+   
 
   
 }
 
-.story0{
+.sectorReport{
+    grid-column: 3;
+    grid-row: 1 / span 2;
+}
+.sectorTitle{
+    text-align: center;
+    text-decoration: underline;
+}
+/* .story0{
     grid-column: 3;
     grid-row: 1 / span 2;
     
-}
+} */
 
 .story1{
     grid-column: 1 / span 2;
@@ -102,4 +111,24 @@
     
    
 }
+.alink1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.storyText{
+    color: black;
+    
+    
+}
+.storyTitle1{
+   grid-row: 1;
+   grid-column: 1 / span 2;
+}
+.storyInfo1{
+    grid-column: 1;
 
+}
+.storyImg1{
+    grid-column: 1;
+}
