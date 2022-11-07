@@ -143,3 +143,10 @@
 .positive{
     color: green;
 }
+
+.sector11{
+    display: flex;
+}
+.sectorTitleChange{
+    margin-right: 10px;
+}

@@ -50,80 +50,112 @@ export default function Home () {
     } else {
         return (
         <div className='storyGrid'>
-            
-            {/* <div className='story0'>
-                <a href={Home[0].url}target='_blank' className='alink'>
-                <h1 className='storyTitle'>{Home[0].title}</h1>
-                <h3 className='storyInfo'> {Home[0].site}, {Home[0].publishedDate}, {Home[0].symbol}</h3>
-               <img className='storyImg0' src={Home[0].image}></img></a> 
-            
-            
-             </div> */}
              <div className='story1'>
-             <a href={Home[1].url}target='_blank' className='alink1'>
-             <h1 className='storyTitle1'>{Home[1].title}</h1>
-                <h3 className='storyInfo1'>{Home[1].site}, {Home[1].publishedDate},     {Home[1].symbol}</h3>
-                <img className='storyImg1' src={Home[1].image}></img>
-                <p className='storyText'>{Home[1].text}</p></a>
-                
+               <a href={Home[1].url}target='_blank' className='alink1'>
+                  <h1 className='storyTitle1'>{Home[1].title}</h1>
+                  <h3 className='storyInfo1'>{Home[1].site}, {Home[1].publishedDate},     {Home[1].symbol}</h3>
+                  <img className='storyImg1' src={Home[1].image}></img>
+                  <p className='storyText'>{Home[1].text}</p>
+                </a>
              </div> 
+
              <div className='story2'>
              <a href={Home[2].url}target='_blank' className='alink'>
-             <h1 className='storyTitle'>{Home[2].title}</h1>
-                <h3 className='storyInfo'>{Home[2].site},  {Home[2].publishedDate},    {Home[2].symbol}</h3>
-                <img className='storyImg' src={Home[2].image}></img></a>
-             </div> 
+                  <h1 className='storyTitle'>{Home[2].title}</h1>
+                  <h3 className='storyInfo'>{Home[2].site},  {Home[2].publishedDate},    {Home[2].symbol}</h3>
+                  <img className='storyImg' src={Home[2].image}></img>
+                </a>
+             </div>
+
              <div className='story3' >
-             <a href={Home[3].url}target='_blank' className='alink'>
-             <h1 className='storyTitle'>{Home[3].title}</h1>
-                <h3 className='storyInfo'>{Home[3].site},  {Home[3].publishedDate},    {Home[3].symbol}</h3>
-                <img className='storyImg' src={Home[3].image}></img></a>
+               <a href={Home[3].url}target='_blank' className='alink'>
+                  <h1 className='storyTitle'>{Home[3].title}</h1>
+                  <h3 className='storyInfo'>{Home[3].site},  {Home[3].publishedDate},    {Home[3].symbol}</h3>
+                  <img className='storyImg' src={Home[3].image}></img>
+                </a>
              </div> 
+
              <div className='story4'>
-             <a href={Home[4].url}target='_blank' className='alink'>
-             <h1 className='storyTitle'>{Home[4].title}</h1>
-                <h3 className='storyInfo'>{Home[4].site},  {Home[4].publishedDate},    {Home[4].symbol}</h3>
-                <img className='storyImg' src={Home[4].image}></img></a>
+               <a href={Home[4].url}target='_blank' className='alink'>
+                  <h1 className='storyTitle'>{Home[4].title}</h1>
+                  <h3 className='storyInfo'>{Home[4].site},  {Home[4].publishedDate},    {Home[4].symbol}</h3>
+                  <img className='storyImg' src={Home[4].image}></img>
+               </a>
              </div> 
+
              <div className='story5'>
-             <a href={Home[5].url}target='_blank' className='alink'>
-             <h1 className='storyTitle'>{Home[5].title}</h1>
-                <h3 className='storyInfo'>{Home[5].site},  {Home[5].publishedDate},    {Home[5].symbol}</h3>
-                <img className='storyImg' src={Home[5].image}></img></a>
+               <a href={Home[5].url}target='_blank' className='alink'>
+                  <h1 className='storyTitle'>{Home[5].title}</h1>
+                  <h3 className='storyInfo'>{Home[5].site},  {Home[5].publishedDate},    {Home[5].symbol}</h3>
+                  <img className='storyImg' src={Home[5].image}></img>
+               </a>
              </div> 
 
              <div className='story6'>
-             <a href={Home[6].url}target='_blank' className='alink'>
-             <h1 className='storyTitle'>{Home[6].title}</h1>
-                <h3 className='storyInfo'>{Home[6].site},  {Home[6].publishedDate},    {Home[5].symbol}</h3>
-                <img className='storyImg' src={Home[6].image}></img></a>
+               <a href={Home[6].url}target='_blank' className='alink'>
+                  <h1 className='storyTitle'>{Home[6].title}</h1>
+                  <h3 className='storyInfo'>{Home[6].site},  {Home[6].publishedDate},    {Home[5].symbol}</h3>
+                  <img className='storyImg' src={Home[6].image}></img>
+                </a>
              </div> 
 
                <div className='sectorReport'>
                   <h1 className='sectorTitle'>Daily Sector Report</h1>
 
-                  <h2>{sector[11].sector}:</h2>
-                   <h2 className={sector[11].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[11].changesPercentage}</h2>
+                  <div className='sector11'>
+                     <h2 className='sectorTitleChange'>{sector[11].sector}:</h2> 
+                     <h2 className={sector[11].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[11].changesPercentage}</h2>
+                  </div>
+                  
+                  <div className='sector11'>
+                     <h2 className='sectorTitleChange'>{sector[7].sector}: </h2>
+                     <h2 className={sector[7].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[7].changesPercentage}</h2>
+                  </div>
 
-                  <h2 className={sector[7].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[7].sector}: {sector[7].changesPercentage}</h2>
+                  <div className='sector11'>
+                     <h2 className='sectorTitleChange'>{sector[6].sector}: </h2>
+                     <h2 className={sector[6].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[6].changesPercentage}</h2>
+                  </div>
 
-                  <h2 className={sector[6].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[6].sector}: {sector[6].changesPercentage}</h2>
+                  <div className='sector11'>
+                     <h2 className='sectorTitleChange'>{sector[10].sector}:</h2>
+                     <h2 className={sector[10].changesPercentage.includes('-') ? 'negative' : 'positive'}> {sector[10].changesPercentage}</h2>
+                  </div>
 
-                  <h2 className={sector[10].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[10].sector}: {sector[10].changesPercentage}</h2>
+                  <div className='sector11'>
+                     <h2 className='sectorTitleChange'>{sector[8].sector}: </h2>
+                     <h2 className={sector[8].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[8].changesPercentage}</h2>
+                  </div>
 
-                  <h2 className={sector[8].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[8].sector}: {sector[8].changesPercentage}</h2>
+                  <div className='sector11'>
+                     <h2 className='sectorTitleChange'>{sector[5].sector}: </h2>
+                     <h2 className={sector[5].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[5].changesPercentage}</h2>
+                  </div>
 
-                  <h2 className={sector[5].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[5].sector}: {sector[5].changesPercentage}</h2>
+                  <div className='sector11'>
+                     <h2 className='sectorTitleChange'>{sector[4].sector}: </h2>
+                     <h2 className={sector[4].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[4].changesPercentage}</h2>
+                  </div>
 
-                  <h2 className={sector[4].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[4].sector}: {sector[4].changesPercentage}</h2>
+                  <div className='sector11'>
+                     <h2 className='sectorTitleChange'>{sector[1].sector}:</h2>
+                     <h2 className={sector[1].changesPercentage.includes('-') ? 'negative' : 'positive'}> {sector[1].changesPercentage}</h2>
+                  </div>
 
-                  <h2 className={sector[1].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[1].sector}: {sector[1].changesPercentage}</h2>
+                  <div className='sector11'>
+                     <h2 className='sectorTitleChange'>{sector[3].sector}: </h2>
+                     <h2 className={sector[3].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[3].changesPercentage}</h2>
+                  </div>
 
-                  <h2 className={sector[3].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[3].sector}: {sector[3].changesPercentage}</h2>
+                  <div className='sector11'>
+                     <h2 className='sectorTitleChange'>{sector[2].sector}: </h2>
+                     <h2 className={sector[2].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[2].changesPercentage}</h2>
+                  </div>
 
-                  <h2 className={sector[2].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[2].sector}: {sector[2].changesPercentage}</h2>
-
-                  <h2 className={sector[9].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[9].sector}: {sector[9].changesPercentage}</h2>
+                  <div className='sector11'>
+                     <h2 className='sectorTitleChange'>{sector[9].sector}: </h2>
+                     <h2 className={sector[9].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[9].changesPercentage}</h2>
+                  </div>
                </div>
              
 
