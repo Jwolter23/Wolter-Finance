@@ -52,15 +52,20 @@
 
 .storyGrid{
     display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 10px;
+    margin-top: 40px;
+  
     
-   
 }
 
 .alink{
     text-decoration: none;
     color: black;
+    
+    
+    
 }
 
 .alink:hover{
@@ -79,3 +84,4 @@
     
    
 }
+
