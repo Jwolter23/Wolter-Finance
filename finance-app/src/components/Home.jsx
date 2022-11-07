@@ -52,8 +52,6 @@ export default function Home () {
         return <h2> Loading please wait</h2>
     } else {
         return (
-         <div>
-          
          <div className='storyGrid'>
                <div className='story1'>
                   <a href={Home[1].url}target='_blank' className='alink1'>
@@ -165,7 +163,7 @@ export default function Home () {
                
 
          </div> 
-         </div>   
+       
         )
     }
 

@@ -44,7 +44,7 @@ export default function Finance (props) {
             <div>
                 <h1>{finance[0].symbol}: {finance[0].name} </h1>
                 <h2>Price: {finance[0].price} </h2>
-                <h3>Change: {finance[0].change}, {finance[0].changesPercentage}%</h3>
+                <h3>Change: {finance[0].change.toFixed(3)}, {finance[0].changesPercentage.toFixed(3)}%</h3>
                 <h3>Day High: {finance[0].dayHigh}</h3>
                 <h3>Day Low: {finance[0].dayLow}</h3>
 

@@ -14,15 +14,17 @@ export default function Nav () {
         setMarket(response.data)
         }
         getMarket()
-
-
+        
+       
     }, [])
+    
+    
     if (!market) {
         return <h2> Loading please wait</h2>
     } else {
     return (
         <div className='wrapper'>
-            
+
             <div className='navlinks2'>
             <Link to='/' className='linkz'>Home</Link>
             <Link to ='/company' className='linkz'>Company</Link>
@@ -31,19 +33,20 @@ export default function Nav () {
             </div>
 
             <div className='markets'>
-                <h3>{market.find(e => e.name === 'Dow Jones Industrial Average').name}: {market.find(e => e.name === 'Dow Jones Industrial Average').price}     {market.find(e => e.name === 'Dow Jones Industrial Average').changesPercentage}%</h3>
+                <h3>{market.find(e => e.name === 'Dow Jones Industrial Average').name}:   {market.find(e => e.name === 'Dow Jones Industrial Average').price}     {market.find(e => e.name === 'Dow Jones Industrial Average').changesPercentage.toFixed(2)}%</h3>
                 
-                <h3>{market.find(e => e.name === 'S&P 500').name}:  
-                {market.find(e => e.name === 'S&P 500').price}
-                {market.find(e => e.name === 'S&P 500').changesPercentage}%</h3>
+                <h3>{market.find(e => e.name === 'S&P 500').name}
+                :   {market.find(e => e.name === 'S&P 500')
+                .price.toFixed(2)}        {market.find(e => e.name === 'S&P 500').changesPercentage.toFixed(2)}%</h3>
 
-                <h3>{market.find(e => e.name === 'NASDAQ Composite').name}:
-                {market.find(e => e.name === 'NASDAQ Composite').price}
-                {market.find(e => e.name === 'NASDAQ Composite').changesPercentage}</h3>
-
+                <h3>{market.find(e => e.name === 'NASDAQ Composite').name}
+                :   {market.find(e => e.name === 'NASDAQ Composite')
+                .price.toFixed(2)}     {market.find(e => e.name === 'NASDAQ Composite').changesPercentage.toFixed(2)}%</h3>
+            
                 <h3>{market.find(e => e.name === 'Russell 2000').name}
-                {market.find(e => e.name === 'Russell 2000').price}
-                {market.find(e => e.name === 'Russell 2000').changesPercentage}</h3>
+                :   {market.find(e => e.name === 'Russell 2000')
+                .price.toFixed(2)}     {market.find(e => e.name === 'Russell 2000').changesPercentage.toFixed(2)}%</h3>
+                
             </div>
             
         </div>
