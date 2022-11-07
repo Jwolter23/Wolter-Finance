@@ -52,20 +52,38 @@
 
 .storyGrid{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     margin: 10px;
     margin-top: 40px;
+
   
+}
+
+.story0{
+    grid-column: 3;
+    grid-row: 1 / span 2;
     
+}
+
+.story1{
+    grid-column: 1 / span 2;
+}
+
+.story6{
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.story2{
+    grid-column: 2;
 }
 
 .alink{
     text-decoration: none;
     color: black;
     
-    
-    
+
 }
 
 .alink:hover{

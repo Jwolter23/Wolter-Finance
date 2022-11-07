@@ -7,8 +7,6 @@ export default function Home () {
 
     const [Home, setHome] =useState(null)
 
-
-
     //we need to call an axios function
     useEffect(() => {
         
@@ -26,6 +24,7 @@ export default function Home () {
     }, [])
     
    
+    
 
     //we need to see the data
     //also create a guard operator
@@ -44,13 +43,13 @@ export default function Home () {
                 <h3 className='storyInfo'> {Home[0].site}, {Home[0].publishedDate}, {Home[0].symbol}</h3>
                <img className='storyImg0' src={Home[0].image}></img></a> 
             
+            
              </div>
              <div className='story1'>
              <a href={Home[1].url}target='_blank' className='alink'>
              <h1 className='storyTitle'>{Home[1].title}</h1>
                 <h3 className='storyInfo'>{Home[1].site}, {Home[1].publishedDate},     {Home[1].symbol}</h3>
                 <img className='storyImg' src={Home[1].image}></img></a>
-                
                 
              </div> 
              <div className='story2'>
@@ -84,11 +83,15 @@ export default function Home () {
                 <h3 className='storyInfo'>{Home[6].site},  {Home[6].publishedDate},    {Home[5].symbol}</h3>
                 <img className='storyImg' src={Home[6].image}></img></a>
              </div> 
+
+           
              
 
         </div>    
         )
     }
 
+
+    
 
 }
