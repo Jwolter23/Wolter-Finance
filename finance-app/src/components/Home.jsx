@@ -45,7 +45,7 @@ export default function Home () {
     //so if data takes a few seconds 
     //site doesnt break
 
-    if (!Home && !sector) {
+    if (!Home || !sector) {
         return <h2> Loading please wait</h2>
     } else {
         return (
@@ -101,7 +101,9 @@ export default function Home () {
 
                <div className='sectorReport'>
                   <h1 className='sectorTitle'>Daily Sector Report</h1>
-                  <h2 className={sector[11].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[11].sector}: {sector[11].changesPercentage}</h2>
+
+                  <h2>{sector[11].sector}:</h2>
+                   <h2 className={sector[11].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[11].changesPercentage}</h2>
 
                   <h2 className={sector[7].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[7].sector}: {sector[7].changesPercentage}</h2>
 
