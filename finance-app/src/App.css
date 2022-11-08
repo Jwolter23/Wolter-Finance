@@ -5,6 +5,8 @@
 }
 .wolterHeader{
     text-align: center;
+    font-family: 'Aleo', serif;
+    font-size: 2em;
 }
 
 .story0:hover,.story1:hover,.story2:hover,.story3:hover,.story4:hover,.story5:hover{
@@ -17,12 +19,13 @@
     color: black;
     display: flex;
     justify-content: space-around;
+    font-family: 'Aleo', serif;
     
     
 }
 
 .linkz:hover{
-    color:burlywood;
+    color:#698882;
 }
 
 .CompanyTitle{
@@ -230,4 +233,24 @@ html{
     margin-top: 15px;
 }
 
+.detailBox{
+    display: flex;
+    justify-content: center;
+}
 
+.specificCompDetail{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.compDetailTitle{
+    display: flex;
+    justify-content: center;
+}
+.compDetailImg{
+    justify-content: center;
+    justify-items: center;
+    max-width: 4em;
+    max-height: 4em;
+}

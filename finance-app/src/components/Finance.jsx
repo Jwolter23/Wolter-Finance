@@ -12,7 +12,7 @@ export default function Finance (props) {
 
 
     //we need to call an axios function
-  
+   
 
     const getFinance = async () => {
         const response = await axios.get(`https://financialmodelingprep.com/api/v3/quote/${props.formState.search.toUpperCase()}?apikey=91c950cb2afdc944512490e8ae2113cc`)
@@ -21,16 +21,18 @@ export default function Finance (props) {
         setFinance(response.data)
 
         }
+      
+    // const [news, setNews] =useState(null)
 
+    // const getNews = async () => {
+    //     const response = await axios.get(`https://financialmodelingprep.com/api/v3/stock_news?tickers=AAPL&limit=50&apikey=91c950cb2afdc944512490e8ae2113cc`)
+    //     console.log(response.data)
+    //      //we need to set state of our data
+    //     setNews(response.data)
+
+    //     }
         
-        
-    
-    //will only take NYSE or NASDAQ but not both
-   
-    //we need to see the data
-    //also create a guard operator
-    //so if data takes a few seconds 
-    //site doesnt break
+
 
     if (!finance) {
         return   <form className='submitForm' onSubmit={props.handleSubmit}>
@@ -56,6 +58,13 @@ export default function Finance (props) {
                 <h3>Change: {finance[0].change.toFixed(3)}, {finance[0].changesPercentage.toFixed(3)}%</h3>
                 <h3>Day High: {finance[0].dayHigh}</h3>
                 <h3>Day Low: {finance[0].dayLow}</h3>
+                <h3>EPS: {finance[0].eps}</h3>
+                <h3>Exchange: {finance[0].exchange}</h3>
+                <h3>PE: {finance[0].pe.toFixed(3)}</h3>
+                <h3>Shares Outstanding: {finance[0].sharesOutstanding}</h3>
+                <h3>Volume: {finance[0].volume}</h3>
+                <h3>Year High: {finance[0].yearHigh}</h3>
+                <h3>Year Low: {finance[0].yearLow}</h3>
                    
             </div>
         )

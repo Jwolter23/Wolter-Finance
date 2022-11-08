@@ -18,9 +18,9 @@ const CompanyDetails = (props) => {
     return companyDetail ? (
         <div>
         <div className='specificCompDetail'>
-            <h1>{companyDetail.symbol}: {companyDetail.companyName}</h1>
+            <h1 className='compDetailTitle'>{companyDetail.symbol}: {companyDetail.companyName}</h1>
+            <img className='compDetailImg'src={companyDetail.image} alt=''></img>
             <h3>{companyDetail.description}</h3>
-            <img src={companyDetail.image} alt=''></img>
             <h3>Market Cap: {companyDetail.mktCap}</h3>
             <h3>Current Price: {companyDetail.price}</h3>
             <h3>Range: {companyDetail.range}</h3>
