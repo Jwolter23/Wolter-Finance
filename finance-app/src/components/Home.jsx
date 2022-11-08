@@ -41,6 +41,23 @@ export default function Home () {
     }, [])
 
 
+
+    const [ipo, setIPO] =useState(null)
+ 
+    useEffect(() => {
+       
+        const getIPO = async () => {
+        const response = await axios.get(`https://financialmodelingprep.com/api/v3/ipo_calendar?from=2022-11-01&to=2022-12-31&apikey=91c950cb2afdc944512490e8ae2113cc`)
+       
+        console.log(response.data)
+        setIPO(response.data)
+        }
+        getIPO()
+
+
+    }, [])
+
+    
    
  
     //we need to see the data
@@ -48,7 +65,7 @@ export default function Home () {
     //so if data takes a few seconds 
     //site doesnt break
 
-    if (!Home || !sector) {
+    if (!Home || !sector || !ipo) {
         return <h2> Loading please wait</h2>
     } else {
         return (
@@ -106,61 +123,97 @@ export default function Home () {
                      <h1 className='sectorTitle'>Daily Sector Report</h1>
 
                      <div className='sector11'>
-                        <h2 className='sectorTitleChange'>{sector[11].sector}:</h2> 
-                        <h2 className={sector[11].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[11].changesPercentage}</h2>
+                        <h3 className='sectorTitleChange'>{sector[11].sector}:</h3> 
+                        <h3 className={sector[11].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[11].changesPercentage}</h3>
                      </div>
                      
                      <div className='sector11'>
-                        <h2 className='sectorTitleChange'>{sector[7].sector}: </h2>
-                        <h2 className={sector[7].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[7].changesPercentage}</h2>
+                        <h3 className='sectorTitleChange'>{sector[7].sector}: </h3>
+                        <h3 className={sector[7].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[7].changesPercentage}</h3>
                      </div>
 
                      <div className='sector11'>
-                        <h2 className='sectorTitleChange'>{sector[6].sector}: </h2>
-                        <h2 className={sector[6].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[6].changesPercentage}</h2>
+                        <h3 className='sectorTitleChange'>{sector[6].sector}: </h3>
+                        <h3 className={sector[6].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[6].changesPercentage}</h3>
                      </div>
 
                      <div className='sector11'>
-                        <h2 className='sectorTitleChange'>{sector[10].sector}:</h2>
-                        <h2 className={sector[10].changesPercentage.includes('-') ? 'negative' : 'positive'}> {sector[10].changesPercentage}</h2>
+                        <h3 className='sectorTitleChange'>{sector[10].sector}:</h3>
+                        <h3 className={sector[10].changesPercentage.includes('-') ? 'negative' : 'positive'}> {sector[10].changesPercentage}</h3>
                      </div>
 
                      <div className='sector11'>
-                        <h2 className='sectorTitleChange'>{sector[8].sector}: </h2>
-                        <h2 className={sector[8].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[8].changesPercentage}</h2>
+                        <h3 className='sectorTitleChange'>{sector[8].sector}: </h3>
+                        <h3 className={sector[8].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[8].changesPercentage}</h3>
                      </div>
 
                      <div className='sector11'>
-                        <h2 className='sectorTitleChange'>{sector[5].sector}: </h2>
-                        <h2 className={sector[5].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[5].changesPercentage}</h2>
+                        <h3 className='sectorTitleChange'>{sector[5].sector}: </h3>
+                        <h3 className={sector[5].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[5].changesPercentage}</h3>
                      </div>
 
                      <div className='sector11'>
-                        <h2 className='sectorTitleChange'>{sector[4].sector}: </h2>
-                        <h2 className={sector[4].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[4].changesPercentage}</h2>
+                        <h3 className='sectorTitleChange'>{sector[4].sector}: </h3>
+                        <h3 className={sector[4].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[4].changesPercentage}</h3>
                      </div>
 
                      <div className='sector11'>
-                        <h2 className='sectorTitleChange'>{sector[1].sector}:</h2>
-                        <h2 className={sector[1].changesPercentage.includes('-') ? 'negative' : 'positive'}> {sector[1].changesPercentage}</h2>
+                        <h3 className='sectorTitleChange'>{sector[1].sector}:</h3>
+                        <h3 className={sector[1].changesPercentage.includes('-') ? 'negative' : 'positive'}> {sector[1].changesPercentage}</h3>
                      </div>
 
                      <div className='sector11'>
-                        <h2 className='sectorTitleChange'>{sector[3].sector}: </h2>
-                        <h2 className={sector[3].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[3].changesPercentage}</h2>
+                        <h3 className='sectorTitleChange'>{sector[3].sector}: </h3>
+                        <h3 className={sector[3].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[3].changesPercentage}</h3>
                      </div>
 
                      <div className='sector11'>
-                        <h2 className='sectorTitleChange'>{sector[2].sector}: </h2>
-                        <h2 className={sector[2].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[2].changesPercentage}</h2>
+                        <h3 className='sectorTitleChange'>{sector[2].sector}: </h3>
+                        <h3 className={sector[2].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[2].changesPercentage}</h3>
                      </div>
 
                      <div className='sector11'>
-                        <h2 className='sectorTitleChange'>{sector[9].sector}: </h2>
-                        <h2 className={sector[9].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[9].changesPercentage}</h2>
+                        <h3 className='sectorTitleChange'>{sector[9].sector}: </h3>
+                        <h3 className={sector[9].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[9].changesPercentage}</h3>
                      </div>
                   </div>
-               
+                  
+                     
+                     <div className='ipoColumn'>
+                        <h1 className='ipoTitle'>Upcoming IPO's</h1>
+
+                        <div className='ipo1'>
+                        <h2>{ipo[0].company}: {ipo[0].symbol}</h2>
+                        <h3>{ipo[0].date} {ipo[0].exchange}</h3>
+                        <h3>{ipo[0].priceRange}</h3>
+                        </div>
+
+                        <div className='ipo2'>
+                        <h2>{ipo[5].company}: {ipo[5].symbol}</h2>
+                        <h3>{ipo[5].date} {ipo[5].exchange}</h3>
+                        <h3>{ipo[5].priceRange}</h3>
+                        </div>
+
+                        <div className='ipo3'>
+                        <h2>{ipo[12].company}: {ipo[12].symbol}</h2>
+                        <h3>{ipo[12].date} {ipo[12].exchange}</h3>
+                        <h3>{ipo[12].priceRange}</h3>
+                        </div>
+
+                        <div className='ipo4'>
+                        <h2>{ipo[17].company}: {ipo[17].symbol}</h2>
+                        <h3>{ipo[17].date} {ipo[12].exchange}</h3>
+                        <h3>{ipo[17].priceRange}</h3>
+                        </div>
+
+                        <div className='ipo4'>
+                        <h2>{ipo[18].company}: {ipo[18].symbol}</h2>
+                        <h3>{ipo[18].date} {ipo[18].exchange}</h3>
+                        <h3>{ipo[18].priceRange}</h3>
+                        </div>
+                        
+                     
+                  </div>
 
          </div> 
        

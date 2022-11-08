@@ -56,18 +56,30 @@
 
 .storyGrid{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 33.33% 33.33% 33.33%;
     gap: 1em;
-    margin-top: 40px;
+    padding: 2em;
     
-   
-
   
+}
+
+.storyTitle{
+    height: 2em;
+}
+
+.storyImg{
+    width: 100%;
+}
+
+.storyInfo{
+    height: 1em;
+    margin-top: 3em;
 }
 
 .sectorReport{
     grid-column: 3;
-    grid-row: 1 / span 2;
+    grid-row: 1 ;
+    margin-bottom: 30px;
 }
 .sectorTitle{
     text-align: center;
@@ -89,6 +101,21 @@
 .story5{
     grid-column: 3;
     grid-row: 3;
+}
+.ipoColumn{
+    grid-column: 3;
+    grid-row: 2;
+    height: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.ipoTitle{
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+.ipo1{
+    grid-column: 1;
+    grid-row: 2;
 }
 
 .alink{
@@ -126,6 +153,7 @@
 }
 .storyText{
     color: black;
+    padding: 1em;
     
     
 }
@@ -149,6 +177,8 @@
 
 .sector11{
     display: flex;
+    margin-bottom: -15px;
+    margin-left: 15px;
 }
 .sectorTitleChange{
     margin-right: 10px;
@@ -158,3 +188,4 @@
     display: flex;
     justify-content: space-around;
 }
+
