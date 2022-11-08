@@ -31,19 +31,19 @@ export default function Nav () {
             <Link to ='/finance' className='linkz'>Stock Search</Link>
             <Link to ='/stocks' className='linkz'>Stocks</Link>
             </div>
-
+        
             <div className='markets'>
-                <h3 >{market.find(e => e.name === 'Dow Jones Industrial Average').name}:   {market.find(e => e.name === 'Dow Jones Industrial Average').price}     {market.find(e => e.name === 'Dow Jones Industrial Average').changesPercentage.toFixed(2)}%</h3>
+                <h3 className={market.find(e => e.name === 'Dow Jones Industrial Average').changesPercentage.toString().includes('-') ? 'negative' : 'positive'}>{market.find(e => e.name === 'Dow Jones Industrial Average').name}:   {market.find(e => e.name === 'Dow Jones Industrial Average').price}     {market.find(e => e.name === 'Dow Jones Industrial Average').changesPercentage.toFixed(2)}%</h3>
                 
-                <h3>{market.find(e => e.name === 'S&P 500').name}
+                <h3 className={market.find(e => e.name === 'S&P 500').changesPercentage.toString().includes('-') ? 'negative' : 'positive'}>{market.find(e => e.name === 'S&P 500').name}
                 :   {market.find(e => e.name === 'S&P 500')
                 .price.toFixed(2)}        {market.find(e => e.name === 'S&P 500').changesPercentage.toFixed(2)}%</h3>
 
-                <h3>{market.find(e => e.name === 'NASDAQ Composite').name}
+                <h3 className={market.find(e => e.name === 'NASDAQ Composite').changesPercentage.toString().includes('-') ? 'negative' : 'positive'}>{market.find(e => e.name === 'NASDAQ Composite').name}
                 :   {market.find(e => e.name === 'NASDAQ Composite')
                 .price.toFixed(2)}     {market.find(e => e.name === 'NASDAQ Composite').changesPercentage.toFixed(2)}%</h3>
             
-                <h3>{market.find(e => e.name === 'Russell 2000').name}
+                <h3 className={market.find(e => e.name === 'Russell 2000').changesPercentage.toString().includes('-') ? 'negative' : 'positive'}>{market.find(e => e.name === 'Russell 2000').name}
                 :   {market.find(e => e.name === 'Russell 2000')
                 .price.toFixed(2)}     {market.find(e => e.name === 'Russell 2000').changesPercentage.toFixed(2)}%</h3>
                 
