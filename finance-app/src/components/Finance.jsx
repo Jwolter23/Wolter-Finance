@@ -22,27 +22,27 @@ export default function Finance (props) {
 
         }
       
-    // const [news, setNews] =useState(null)
+    const [news, setNews] =useState(null)
 
-    // const getNews = async () => {
-    //     const response1 = await axios.get(`https://financialmodelingprep.com/api/v3/stock_news?tickers=${props.formState.search.toUpperCase()}&limit=10&apikey=91c950cb2afdc944512490e8ae2113cc`)
-    //     console.log(response1.data)
-    //      //we need to set state of our data
-    //     setNews(response1.data)
+    const getNews = async () => {
+        const response1 = await axios.get(`https://financialmodelingprep.com/api/v3/stock_news?tickers=${props.formState.search.toUpperCase()}&limit=10&apikey=91c950cb2afdc944512490e8ae2113cc`)
+        console.log(response1.data)
+         //we need to set state of our data
+        setNews(response1.data)
 
-    //     }
+        }
         
-    // || !news
-
-    // && getNews
+    
 
     
 
-    if (!finance) {
+    
+
+    if (!finance || !news) {
         return   <form className='submitForm' onSubmit={props.handleSubmit}>
         <label htmlFor='search'>Search: </label>
         <input type='text' id='search' onChange={props.handleChange} value={props.formState.search}></input>
-        <button type='submit' onClick={getFinance}>Send</button>
+        <button type='submit' onClick={()=>{getFinance(); getNews()}}>Send</button>
                 </form>
         
     } else {
@@ -54,7 +54,7 @@ export default function Finance (props) {
                     <form className='submitForm'onSubmit={props.handleSubmit}>
                         <label htmlFor='search'>Search Tiker: </label>
                         <input type='text' id='search' onChange={props.handleChange} value={props.formState.search}></input>
-                        <button type='submit' onClick={getFinance}>Send</button>
+                        <button type='submit' onClick={()=>{getFinance(); getNews()}}>Send</button>
                     </form>
                 <div className='stockSearchInfo'>
                 <h1>{finance[0].symbol}: {finance[0].name} </h1>
@@ -71,11 +71,11 @@ export default function Finance (props) {
                 <h3>Year Low: {finance[0].yearLow}</h3>
                 </div>
 
-                {/* <div className='stockSearchNews'>
+                <div className='stockSearchNews'>
                     <h3>{news[0].title}</h3>
                     <h3>{news[0].site}, {news[0].publishedDate}, {news[0].symbol}</h3>
                     <h3>{news[0].image}</h3>
-                </div> */}
+                </div>
                    
             </div>
         )
