@@ -37,6 +37,7 @@ export default function Home () {
         }
         getSector()
 
+      //   setInterval(getSector, 5000)
 
     }, [])
 
@@ -175,6 +176,11 @@ export default function Home () {
                      <div className='sector11'>
                         <h3 className='sectorTitleChange'>{sector[9].sector}: </h3>
                         <h3 className={sector[9].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[9].changesPercentage}</h3>
+                     </div>
+
+                     <div className='sector11'>
+                        <h3 className='sectorTitleChange'>{sector[0].sector}:</h3> 
+                        <h3 className={sector[0].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[0].changesPercentage}</h3>
                      </div>
                   </div>
                   

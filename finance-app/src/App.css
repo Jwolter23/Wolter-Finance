@@ -26,18 +26,33 @@
 }
 
 .CompanyTitle{
-    border: 2px solid black;
-    /* width: auto; */
     width: 200px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    padding: 5px;
 
 }
-.CompanyTitle:hover{
-    cursor: pointer;
-    color: rgb(221, 212, 84);
-    background-color: darkgray;
+
+
+.companyNames{
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 10px;
+   
     
 }
+.companyNames:hover{
+    cursor: pointer;
+    color: #46686E;
+    background-color: #A9B194;
+
+}
+
 .grid{
     box-sizing: border-box;
     display: grid;
@@ -47,7 +62,7 @@
     width: 1200px;
     overflow-y: scroll;
     gap: 25px;
-    margin-top: 50px;
+    margin-top: 25px;
     border: 1px solid black;
     justify-content: center;
     justify-content: space-around;
@@ -187,6 +202,15 @@
 .markets{
     display: flex;
     justify-content: space-around;
-    background-color: darkgray;
+    background-color: #D0CAB2;
+}
+html{
+    background-color: #f3e5d4;
+}
+
+.symbolCom{
+    position: relative;
+    bottom: 0;
+    
 }
 

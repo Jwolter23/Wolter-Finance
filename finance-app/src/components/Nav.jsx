@@ -15,6 +15,7 @@ export default function Nav () {
         }
         getMarket()
         
+        // setInterval(getMarket, 5000)
        
     }, [])
     
