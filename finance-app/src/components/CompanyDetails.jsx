@@ -2,9 +2,33 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
+
+
 const CompanyDetails = (props) => {
 
     let { index } = useParams()
+
+    
+
+    // const [exec, setExec] =useState(null)
+
+ 
+    // useEffect(() => {
+        
+    //     const getExec = async () => {
+    //     const response4 = await axios.get(`https://financialmodelingprep.com/api/v3/key-executives/${selectedCompany}?apikey=91c950cb2afdc944512490e8ae2113cc
+    //     `)
+        
+    //     console.log(response4.data)
+    
+    //     setExec(response4.data)
+  
+    //     }
+    //     getExec()
+    // }, [])
+
+
+
 
     const [companyDetail, setCompanyDetail] = useState('')
 
@@ -15,7 +39,7 @@ const CompanyDetails = (props) => {
         setCompanyDetail(selectedCompany)
         
     }, [props.company, index])
-    return companyDetail ? (
+    return companyDetail  ? (
         <div>
         <div className='specificCompDetail'>
             <h1 className='compDetailTitle'>{companyDetail.symbol}: {companyDetail.companyName}</h1>

@@ -107,6 +107,7 @@
 .sectorTitle{
     text-align: center;
     text-decoration: underline;
+    color: blue;
 }
 
 .story1{
@@ -253,8 +254,8 @@ html{
     display: flex;
     justify-content: center;
 
-    max-width: 4em;
-    max-height: 4em;
+    max-width: 8em;
+    max-height: 8em;
 }
 
 .market1{

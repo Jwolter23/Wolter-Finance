@@ -1,12 +1,13 @@
 import { useNavigate } from 'react-router-dom'
 
+
 const Company = (props) => {
     let navigate = useNavigate()
 
     const showComp = (index) => {
         navigate(`${index}`)
     }
-
+ 
 
     if(!props.company) {
         return <h2> Loading... Please wait.</h2>
