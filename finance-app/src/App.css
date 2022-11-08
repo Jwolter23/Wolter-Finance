@@ -242,6 +242,7 @@ html{
     display: flex;
     flex-direction: column;
     
+    
 }
 
 .compDetailTitle{
@@ -249,8 +250,18 @@ html{
     justify-content: center;
 }
 .compDetailImg{
+    display: flex;
     justify-content: center;
-    justify-items: center;
+
     max-width: 4em;
     max-height: 4em;
+}
+
+.market1{
+    display: flex;
+    
+}
+.compDetailImgDiv{
+    display: flex;
+    justify-content: center;
 }

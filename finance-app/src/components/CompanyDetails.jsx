@@ -19,7 +19,7 @@ const CompanyDetails = (props) => {
         <div>
         <div className='specificCompDetail'>
             <h1 className='compDetailTitle'>{companyDetail.symbol}: {companyDetail.companyName}</h1>
-            <img className='compDetailImg'src={companyDetail.image} alt=''></img>
+            <div class='compDetailImgDiv'><img className='compDetailImg'src={companyDetail.image} alt=''></img></div>
             <h3>{companyDetail.description}</h3>
             <h3>Market Cap: {companyDetail.mktCap}</h3>
             <h3>Current Price: {companyDetail.price}</h3>
