@@ -33,7 +33,7 @@ export default function Nav () {
             </div>
 
             <div className='markets'>
-                <h3>{market.find(e => e.name === 'Dow Jones Industrial Average').name}:   {market.find(e => e.name === 'Dow Jones Industrial Average').price}     {market.find(e => e.name === 'Dow Jones Industrial Average').changesPercentage.toFixed(2)}%</h3>
+                <h3 >{market.find(e => e.name === 'Dow Jones Industrial Average').name}:   {market.find(e => e.name === 'Dow Jones Industrial Average').price}     {market.find(e => e.name === 'Dow Jones Industrial Average').changesPercentage.toFixed(2)}%</h3>
                 
                 <h3>{market.find(e => e.name === 'S&P 500').name}
                 :   {market.find(e => e.name === 'S&P 500')
