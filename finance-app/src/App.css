@@ -266,3 +266,20 @@ html{
     display: flex;
     justify-content: center;
 }
+
+.totalSearchDiv{
+    display: flex;
+   
+}
+
+.stockSearchNews{
+    display: grid;
+    gap: 0.3em;
+    justify-content:right;
+    width: 60%;
+    
+}
+
+.newsTitle{
+    height: 2em;
+}
