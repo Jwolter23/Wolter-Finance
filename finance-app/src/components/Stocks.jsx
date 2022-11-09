@@ -87,7 +87,10 @@ export default function Stocks () {
                         <div>
                             
                            <h2> {gain.name} </h2> <h5>{gain.symbol}</h5>
-                            <h4> ${gain.price} {gain.change}% </h4>
+                           <div className='gainPricePer'>
+                            <h4> ${gain.price} </h4> 
+                            <h4 className={gain.change.toString().includes('-') ? 'negative' : 'positive'}> {gain.change}% </h4>
+                            </div>
                         </div>
                         
                     ))
@@ -101,7 +104,10 @@ export default function Stocks () {
                     loser.map((lose) => (
                         <div>
                             <h2>{lose.name}</h2> <h5>{lose.symbol}</h5>
-                            <h4>${lose.price} {lose.change}%</h4>
+                            <div className='losePricePer'>
+                            <h4 >${lose.price}</h4> 
+                            <h4 className={lose.change.toString().includes('-') ? 'negative' : 'positive'}>{lose.change}%</h4>
+                            </div>
                         </div>
                     ))
                 }
@@ -114,7 +120,10 @@ export default function Stocks () {
                     active.map((act) => (
                         <div>
                             <h2>{act.name}</h2> <h5>{act.symbol}</h5>
-                            <h4>${act.price} {act.change}%</h4>
+                            <div className='activePricePer'>
+                            <h4>${act.price}</h4> 
+                            <h4 className={act.change.toString().includes('-') ? 'negative' : 'positive'}>{act.change}%</h4>
+                            </div>
                         </div>
                     ))
                 }

@@ -302,3 +302,16 @@ html{
 .activeDiv{
     grid-column: 3;
 }
+.gainPricePer{
+    display: flex;
+    gap: 1em;
+}
+.losePricePer{
+    display: flex;
+    gap: 1em;
+}
+
+.activePricePer{
+    display: flex;
+    gap: 1em;
+}
