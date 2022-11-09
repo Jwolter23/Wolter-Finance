@@ -316,3 +316,13 @@ html{
     display: flex;
     gap: 1em;
 }
+
+.stockPercentClass{
+    gap: 0.5em;
+}
+
+.priceDiv{
+    display: flex;
+    gap: 0.5em;
+}
+
