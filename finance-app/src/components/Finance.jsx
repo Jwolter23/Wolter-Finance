@@ -40,8 +40,8 @@ export default function Finance (props) {
 
     if (!finance || !news) {
         return   <form className='submitForm' onSubmit={props.handleSubmit}>
-        <label htmlFor='search'>Search: </label>
-        <input type='text' id='search' onChange={props.handleChange} value={props.formState.search}></input>
+        <label htmlFor='search'>Search Tiker: </label>
+        <input type='text' placeholder='AAPL, WMT, nvda, ibm'id='search' onChange={props.handleChange} value={props.formState.search}></input>
         <button type='submit' onClick={()=>{getFinance(); getNews()}}>Search</button>
                 </form>
         

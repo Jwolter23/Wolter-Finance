@@ -79,7 +79,7 @@ export default function Stocks () {
     } else {
         return (
             
-               <div className='activityGrid'>
+            <div className='activityGrid'>
                 <div className='gainerDiv'>
                     
                 <h1 className='largeGain'>Largest Gainers</h1>
@@ -129,7 +129,7 @@ export default function Stocks () {
                     ))
                 }
                 </div>
-               </div>
+            </div>
 
                 
         )

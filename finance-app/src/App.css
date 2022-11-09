@@ -276,7 +276,7 @@ html{
 
 .totalSearchDiv{
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 40% 60%;
     margin: 1em;
    
 }
@@ -284,9 +284,14 @@ html{
 .stockSearchNews{
     display: grid;
     grid-template-columns: 50% 50%;
-    gap: 2em;
-    justify-content:end;
+    gap: 0 4em;
+    
     margin: 0 1em;
+}
+
+.newsStory{
+    max-width: 100%;
+   
 }
 
 .newsTitle{
@@ -302,20 +307,24 @@ html{
     gap: 1em;
     margin: 2em;
     
+    
 }
 .gainerDiv{
     grid-column: 1;
     border: 2px solid black;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding-left: 1em;
+    height: 50em;
+    overflow-y: scroll;
 }
 .loserDiv{
     grid-column: 2;
     border: 2px solid black;
     display: flex;
     flex-direction: column;
+    height: 50em;
+    overflow-y: scroll;
    
     padding-left: 1em;
 }
@@ -324,9 +333,15 @@ html{
     border: 2px solid black;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding-left: 1em;
+    height: 50em;
+    overflow-y: scroll;
+   
 }
+/* .gainerDiv, .loserDiv, .activeDiv{
+    height: 320em;
+    overflow-y: scroll;
+} */
 .gainPricePer{
     display: flex;
     gap: 1em;
