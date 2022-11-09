@@ -382,3 +382,16 @@ html{
     background-color: #A9B194
     
 }
+
+.sortingButton{
+    width: 8em;
+    background-color: #D0CAB2;
+    cursor: pointer;
+}
+.sortingButtonDiv{
+    display: flex;
+    gap: 2em;
+    padding: 1em;
+    justify-content: space-around;
+    
+}

@@ -3,22 +3,19 @@ import axios from 'axios'
 
 export default function Home () {
 
-    //create a state for our data 
 
     const [Home, setHome] =useState(null)
 
-    //we need to call an axios function
     useEffect(() => {
         
         const getHome = async () => {
         const response = await axios.get(`https://financialmodelingprep.com/api/v3/stock_news?limit=25&apikey=${process.env.REACT_APP_FMP_KEY}`)
         
         console.log(response.data)
-         //we need to set state of our data
+        
         setHome(response.data)
 
-        //     console.log(company)
-        // console.log(company['Meta Data'])
+       
         }
         getHome()
     }, [])

@@ -20,7 +20,10 @@ export default function Finance (props) {
          //we need to set state of our data
         setFinance(response.data)
 
+        
+
         }
+        // setFinance(getFinance, 5000)
       
     const [news, setNews] =useState(null)
 

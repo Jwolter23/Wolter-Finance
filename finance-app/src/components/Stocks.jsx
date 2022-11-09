@@ -5,7 +5,22 @@ export default function Stocks () {
 
     //create a state for our data 
 
+    let beta = () => {
+        setGainer([...gainer].sort((a, b) => a.change > b.change ? 1 : -1 ))
+      } 
 
+      let charlie = () => {
+        setGainer([...gainer].sort((a, b) => a.change < b.change ? 1 : -1 ))
+      } 
+
+
+      let delta = () => {
+        setLoser([...loser].sort((a, b) => a.change > b.change ? 1 : -1 ))
+      } 
+
+      let gamma = () => {
+        setLoser([...loser].sort((a, b) => a.change < b.change ? 1 : -1 ))
+      } 
 
 
     const [gainer, setGainer] =useState(null)
@@ -23,6 +38,9 @@ export default function Stocks () {
 
         }
         getGainer()
+
+        // setGainer(getGainer, 5000)
+
     }, [])
     
 
@@ -42,6 +60,8 @@ export default function Stocks () {
 
         }
         getLoser()
+
+        // setLoser(getLoser, 5000)
     }, [])
 
 
@@ -60,6 +80,8 @@ export default function Stocks () {
 
         }
         getActive()
+
+        // setActive(getActive, 5000)
     }, [])
 
 
@@ -80,9 +102,15 @@ export default function Stocks () {
         return (
             
             <div className='activityGrid'>
+                
                 <div className='gainerDiv'>
-                    
+                    <div className='sortingButtonDiv'>
+                <button className='sortingButton' onClick={beta}>Smallest to Largest %</button>
+                <button className='sortingButton' onClick={charlie}>Largest to Smallest %</button>
+                    </div>
+
                 <h1 className='largeGain'>Largest Gainers</h1>
+                
                 {
                     gainer.map((gain) => (
                         <div>
@@ -100,7 +128,13 @@ export default function Stocks () {
                 }
                 </div>
                 <div className='loserDiv'>
+                    <div className='sortingButtonDiv'>
+                <button className='sortingButton' onClick={delta}>Largest to Smallest %</button>
+                <button className='sortingButton' onClick={gamma}>Smallest to Largest %</button>
+                    </div>
+
                 <h1 className='largGain'>Largest Losers</h1>
+                    
                 {
                     loser.map((lose) => (
                         <div>
