@@ -226,7 +226,13 @@ html{
 .sortListA{
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 5px;
+    
+}
+.sortListA:hover{
+ cursor: pointer;
+ background-color: #A9B194;
 }
 .submitForm{
     display: flex;
@@ -293,15 +299,33 @@ html{
 .activityGrid{
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
+    gap: 1em;
+    margin: 2em;
+    
 }
 .gainerDiv{
     grid-column: 1;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1em;
 }
 .loserDiv{
     grid-column: 2;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+   
+    padding-left: 1em;
 }
 .activeDiv{
     grid-column: 3;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1em;
 }
 .gainPricePer{
     display: flex;
@@ -325,4 +349,21 @@ html{
     display: flex;
     gap: 0.5em;
 }
+.compExchange{
+    display: flex;
+    justify-content: center;
+    margin-top: -1em;
+    margin-bottom: 3em;
+}
+.bulkInfo{
+    display: flex;
+    justify-content: space-around;
+    
+    margin-bottom: -1em;
+    margin-top: 0.5em;
+}
 
+.backButton:hover{
+    background-color: #A9B194
+    
+}

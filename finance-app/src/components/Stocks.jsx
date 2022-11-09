@@ -81,7 +81,8 @@ export default function Stocks () {
             
                <div className='activityGrid'>
                 <div className='gainerDiv'>
-                <h1>Largest Gainers</h1>
+                    
+                <h1 className='largeGain'>Largest Gainers</h1>
                 {
                     gainer.map((gain) => (
                         <div>
@@ -99,7 +100,7 @@ export default function Stocks () {
                 }
                 </div>
                 <div className='loserDiv'>
-                <h1>Largest Losers</h1>
+                <h1 className='largGain'>Largest Losers</h1>
                 {
                     loser.map((lose) => (
                         <div>
@@ -115,7 +116,7 @@ export default function Stocks () {
 
 
                 <div className='activeDiv'>
-                <h1>Most Active</h1>
+                <h1 className='largeGain'>Most Active</h1>
                 {
                     active.map((act) => (
                         <div>

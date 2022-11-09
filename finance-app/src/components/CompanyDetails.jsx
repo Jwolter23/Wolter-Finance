@@ -42,16 +42,25 @@ const CompanyDetails = (props) => {
     return companyDetail  ? (
         <div>
         <div className='specificCompDetail'>
-            <h1 className='compDetailTitle'>{companyDetail.symbol}: {companyDetail.companyName}</h1>
+            <h1 className='compDetailTitle'>{companyDetail.symbol}: {companyDetail.companyName}</h1> 
+            <h5 className='compExchange'>{companyDetail.exchangeShortName}</h5>
             <div class='compDetailImgDiv'><img className='compDetailImg'src={companyDetail.image} alt=''></img></div>
-            <h3>{companyDetail.description}</h3>
+            <div className='bulkInfo'>
+            <h3 >CEO: {companyDetail.ceo}</h3>
             <h3>Market Cap: {companyDetail.mktCap}</h3>
+            <h3>{companyDetail.sector}</h3>
+            <h3>Employees: {companyDetail.fullTimeEmployees}</h3>
+            </div>
+            <h3>{companyDetail.description}</h3>
+           
+
+            {/* <h3>Market Cap: {companyDetail.mktCap}</h3>
             <h3>Current Price: {companyDetail.price}</h3>
-            <h3>Range: {companyDetail.range}</h3>
+            <h3>Range: {companyDetail.range}</h3> */}
             
         </div>
         <div className='backButtonWrap'>
-                <button><Link to='/company'>Back</Link></button>
+                <button className='backButton'><Link to='/company'>Back</Link></button>
             </div>
         </div>
             
