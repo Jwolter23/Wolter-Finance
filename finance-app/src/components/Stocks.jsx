@@ -13,7 +13,7 @@ export default function Stocks () {
     useEffect(() => {
         
         const getGainer = async () => {
-        const response9 = await axios.get(`https://financialmodelingprep.com/api/v3/stock_market/gainers?apikey=91c950cb2afdc944512490e8ae2113cc`)
+        const response9 = await axios.get(`https://financialmodelingprep.com/api/v3/stock_market/gainers?apikey=${process.env.REACT_APP_FMP_KEY}`)
         
 
          //we need to set state of our data
@@ -32,7 +32,7 @@ export default function Stocks () {
     useEffect(() => {
         
         const getLoser = async () => {
-        const response8 = await axios.get(`https://financialmodelingprep.com/api/v3/stock_market/losers?apikey=91c950cb2afdc944512490e8ae2113cc`)
+        const response8 = await axios.get(`https://financialmodelingprep.com/api/v3/stock_market/losers?apikey=${process.env.REACT_APP_FMP_KEY}`)
         
 
          //we need to set state of our data
@@ -51,7 +51,7 @@ export default function Stocks () {
     useEffect(() => {
         
         const getActive = async () => {
-        const response7 = await axios.get(` https://financialmodelingprep.com/api/v3/stock_market/actives?apikey=91c950cb2afdc944512490e8ae2113cc`)
+        const response7 = await axios.get(` https://financialmodelingprep.com/api/v3/stock_market/actives?apikey=${process.env.REACT_APP_FMP_KEY}`)
         
 
          console.log(response7.data)

@@ -43,7 +43,7 @@ let alph = () => {
   useEffect(() => {
       
       const getCompany = async () => {
-      const response = await axios.get(`https://financialmodelingprep.com/api/v3/profile/${multiCo}?apikey=91c950cb2afdc944512490e8ae2113cc`)
+      const response = await axios.get(`https://financialmodelingprep.com/api/v3/profile/${multiCo}?apikey=${process.env.REACT_APP_FMP_KEY}`)
      
       console.log(response.data)
        //we need to set state of our data

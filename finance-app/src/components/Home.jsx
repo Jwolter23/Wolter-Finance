@@ -11,7 +11,7 @@ export default function Home () {
     useEffect(() => {
         
         const getHome = async () => {
-        const response = await axios.get(`https://financialmodelingprep.com/api/v3/stock_news?limit=25&apikey=91c950cb2afdc944512490e8ae2113cc`)
+        const response = await axios.get(`https://financialmodelingprep.com/api/v3/stock_news?limit=25&apikey=${process.env.REACT_APP_FMP_KEY}`)
         
         console.log(response.data)
          //we need to set state of our data
@@ -30,7 +30,7 @@ export default function Home () {
     useEffect(() => {
        
         const getSector = async () => {
-        const response = await axios.get(`https://financialmodelingprep.com/api/v3/sector-performance?apikey=91c950cb2afdc944512490e8ae2113cc`)
+        const response = await axios.get(`https://financialmodelingprep.com/api/v3/sector-performance?apikey=${process.env.REACT_APP_FMP_KEY}`)
        
         console.log(response.data)
         setSector(response.data)
@@ -48,7 +48,7 @@ export default function Home () {
     useEffect(() => {
        
         const getIPO = async () => {
-        const response = await axios.get(`https://financialmodelingprep.com/api/v3/ipo_calendar?from=2022-11-01&to=2022-12-31&apikey=91c950cb2afdc944512490e8ae2113cc`)
+        const response = await axios.get(`https://financialmodelingprep.com/api/v3/ipo_calendar?from=2022-11-01&to=2022-12-31&apikey=${process.env.REACT_APP_FMP_KEY}`)
        
         console.log(response.data)
         setIPO(response.data)

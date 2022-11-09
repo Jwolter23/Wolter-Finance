@@ -15,7 +15,7 @@ export default function Finance (props) {
    
 
     const getFinance = async () => {
-        const response = await axios.get(`https://financialmodelingprep.com/api/v3/quote/${props.formState.search.toUpperCase()}?apikey=91c950cb2afdc944512490e8ae2113cc`)
+        const response = await axios.get(`https://financialmodelingprep.com/api/v3/quote/${props.formState.search.toUpperCase()}?apikey=${process.env.REACT_APP_FMP_KEY}`)
         console.log(response.data)
          //we need to set state of our data
         setFinance(response.data)
@@ -25,7 +25,7 @@ export default function Finance (props) {
     const [news, setNews] =useState(null)
 
     const getNews = async () => {
-        const response1 = await axios.get(`https://financialmodelingprep.com/api/v3/stock_news?tickers=${props.formState.search.toUpperCase()}&limit=10&apikey=91c950cb2afdc944512490e8ae2113cc`)
+        const response1 = await axios.get(`https://financialmodelingprep.com/api/v3/stock_news?tickers=${props.formState.search.toUpperCase()}&limit=10&apikey=${process.env.REACT_APP_FMP_KEY}`)
         console.log(response1.data)
          //we need to set state of our data
         setNews(response1.data)

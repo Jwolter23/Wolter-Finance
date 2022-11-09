@@ -8,7 +8,7 @@ export default function Nav () {
     useEffect(() => {
        
         const getMarket = async () => {
-        const response = await axios.get(`https://financialmodelingprep.com/api/v3/quotes/index?apikey=91c950cb2afdc944512490e8ae2113cc`)
+        const response = await axios.get(`https://financialmodelingprep.com/api/v3/quotes/index?apikey=${process.env.REACT_APP_FMP_KEY}`)
        
         console.log(response.data)
         setMarket(response.data)
