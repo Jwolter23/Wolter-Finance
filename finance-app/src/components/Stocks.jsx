@@ -8,19 +8,21 @@ export default function Stocks () {
 
 
 
-    const [stocks, setStocks] =useState(null)
+    const [gainer, setGainer] =useState(null)
     //we need to call an axios function
     useEffect(() => {
         
-        const getStocks = async () => {
-        const response = await axios.get(`https://financialmodelingprep.com/api/v3/quote/AAPL?apikey=91c950cb2afdc944512490e8ae2113cc`)
+        const getGainer = async () => {
+        const response9 = await axios.get(`https://financialmodelingprep.com/api/v3/stock_market/gainers?apikey=91c950cb2afdc944512490e8ae2113cc`)
         
 
          //we need to set state of our data
-        setStocks(response.data)
+         console.log(response9.data)
+        setGainer(response9.data)
+        console.log(gainer)
 
         }
-        getStocks()
+        getGainer()
     }, [])
     
    
@@ -30,16 +32,26 @@ export default function Stocks () {
     //so if data takes a few seconds 
     //site doesnt break
 
-    if (!stocks) {
+    if (!gainer) {
         return <h2> Loading please wait</h2>
     } else {
         return (
-            <div>
-                <h1> {stocks[0].symbol}: {stocks[0].price} </h1>
-                <h2>{stocks[0].volume}</h2>
+            
+               <div>
+                <h1>Largest Gainers</h1>
+                {
+                    gainer.map((gain) => (
+                        <div>
+                            
+                           <h2> {gain.name} </h2> <h5>{gain.symbol}</h5>
+                            <h4> ${gain.price} {gain.change}% </h4>
+                        </div>
+                        
+                    ))
+                }
+               </div>
 
                 
-            </div>
         )
     }
 

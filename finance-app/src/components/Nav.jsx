@@ -30,7 +30,7 @@ export default function Nav () {
             <Link to='/' className='linkz'>Home</Link>
             <Link to ='/company' className='linkz'>Company</Link>
             <Link to ='/finance' className='linkz'>Stock Search</Link>
-            <Link to ='/stocks' className='linkz'>Stocks</Link>
+            <Link to ='/stocks' className='linkz'>Activity</Link>
             </div>
         
             <div className='markets'>
