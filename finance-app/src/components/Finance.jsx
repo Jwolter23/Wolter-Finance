@@ -48,7 +48,7 @@ export default function Finance (props) {
     } else if (finance[0].pe){
         return (
             <div className='searchHolder'>
-                 <form className='submitForm'onSubmit={props.handleSubmit}>
+                        <form className='submitForm'onSubmit={props.handleSubmit}>
                             <label htmlFor='search'>Search Tiker: </label>
                             <input type='text' id='search' onChange={props.handleChange} value={props.formState.search}></input>
                             <button type='submit' onClick={()=>{getFinance(); getNews()}}>Search</button>
@@ -56,43 +56,51 @@ export default function Finance (props) {
                 <div className='totalSearchDiv'>
                        
                     <div className='stockSearchInfo'>
-                    <h1>{finance[0].symbol}: {finance[0].name} </h1>
-                    <h2>Price: {finance[0].price} </h2>
-                    <h3>Change: {finance[0].change.toFixed(3)}, {finance[0].changesPercentage.toFixed(3)}%</h3>
-                    <h3>Day High: {finance[0].dayHigh}</h3>
-                    <h3>Day Low: {finance[0].dayLow}</h3>
-                    <h3>EPS: {finance[0].eps}</h3>
-                    <h3>Exchange: {finance[0].exchange}</h3>
-                    <h3>PE: {finance[0].pe.toFixed(3)}</h3>
-                    <h3>Shares Outstanding: {finance[0].sharesOutstanding}</h3>
-                    <h3>Volume: {finance[0].volume}</h3>
-                    <h3>Year High: {finance[0].yearHigh}</h3>
-                    <h3>Year Low: {finance[0].yearLow}</h3>
+                        <h1>{finance[0].symbol}: {finance[0].name} </h1>
+                        <h2>Price: {finance[0].price} </h2>
+                        <h3>Change: {finance[0].change.toFixed(3)}, {finance[0].changesPercentage.toFixed(3)}%</h3>
+                        <h3>Day High: {finance[0].dayHigh}</h3>
+                        <h3>Day Low: {finance[0].dayLow}</h3>
+                        <h3>EPS: {finance[0].eps}</h3>
+                        <h3>Exchange: {finance[0].exchange}</h3>
+                        <h3>PE: {finance[0].pe.toFixed(3)}</h3>
+                        <h3>Shares Outstanding: {finance[0].sharesOutstanding}</h3>
+                        <h3>Volume: {finance[0].volume}</h3>
+                        <h3>Year High: {finance[0].yearHigh}</h3>
+                        <h3>Year Low: {finance[0].yearLow}</h3>
                     </div>
     
                     <div className='stockSearchNews'>
-                        <div>
-                        <h2 className='newsTitle'>{news[0].title}</h2>
-                        <h3>{news[0].site}, {news[0].publishedDate}, {news[0].symbol}</h3>
-                        <img src={news[0].image}></img>
+                        <div className='newsStory'>
+                            <a href={news[0].url}target='_blank' className='alink'>
+                                <h2 className='newsTitle'>{news[0].title}</h2>
+                                <h3>{news[0].site}, {news[0].publishedDate}, {news[0].symbol}</h3>
+                                <img src={news[0].image}></img>
+                            </a>
                         </div>
     
-                        <div>
-                        <h2 className='newsTitle'>{news[1].title}</h2>
-                        <h3>{news[1].site}, {news[1].publishedDate}, {news[1].symbol}</h3>
-                        <img src={news[1].image}></img>
+                        <div className='newsStory'>
+                            <a href={news[1].url}target='_blank' className='alink'>
+                                <h2 className='newsTitle'>{news[1].title}</h2>
+                                <h3>{news[1].site}, {news[1].publishedDate}, {news[1].symbol}</h3>
+                                <img src={news[1].image}></img>
+                            </a>
                         </div>
     
-                        <div>
-                        <h2 className='newsTitle'>{news[2].title}</h2>
-                        <h3>{news[2].site}, {news[2].publishedDate}, {news[2].symbol}</h3>
-                        <img src={news[2].image}></img>
+                        <div className='newsStory'>
+                            <a href={news[2].url}target='_blank' className='alink'>
+                                <h2 className='newsTitle'>{news[2].title}</h2>
+                                <h3>{news[2].site}, {news[2].publishedDate}, {news[2].symbol}</h3>
+                                <img src={news[2].image}></img>
+                            </a>
                         </div>
     
-                        <div>
-                        <h2 className='newsTitle'>{news[3].title}</h2>
-                        <h3>{news[3].site}, {news[3].publishedDate}, {news[3].symbol}</h3>
-                        <img src={news[3].image}></img>
+                        <div className='newsStory'>
+                            <a href={news[3].url}target='_blank' className='alink'>
+                                <h2 className='newsTitle'>{news[3].title}</h2>
+                                <h3>{news[3].site}, {news[3].publishedDate}, {news[3].symbol}</h3>
+                                <img src={news[3].image}></img>
+                            </a>
                         </div>
                     </div>
                        
@@ -110,42 +118,51 @@ export default function Finance (props) {
             <div className='totalSearchDiv'>
                    
                 <div className='stockSearchInfo'>
-                <h1>{finance[0].symbol}: {finance[0].name} </h1>
-                <h2>Price: {finance[0].price} </h2>
-                <h3>Change: {finance[0].change.toFixed(3)}, {finance[0].changesPercentage.toFixed(3)}%</h3>
-                <h3>Day High: {finance[0].dayHigh}</h3>
-                <h3>Day Low: {finance[0].dayLow}</h3>
-                <h3>EPS: {finance[0].eps}</h3>
-                <h3>Exchange: {finance[0].exchange}</h3>
-                <h3>Shares Outstanding: {finance[0].sharesOutstanding}</h3>
-                <h3>Volume: {finance[0].volume}</h3>
-                <h3>Year High: {finance[0].yearHigh}</h3>
-                <h3>Year Low: {finance[0].yearLow}</h3>
+                    <h1>{finance[0].symbol}: {finance[0].name} </h1>
+                    <h2>Price: {finance[0].price} </h2>
+                    <h3>Change: {finance[0].change.toFixed(3)}, {finance[0].changesPercentage.toFixed(3)}%</h3>
+                    <h3>Day High: {finance[0].dayHigh}</h3>
+                    <h3>Day Low: {finance[0].dayLow}</h3>
+                    <h3>EPS: {finance[0].eps}</h3>
+                    <h3>Exchange: {finance[0].exchange}</h3>
+                    <h3>Shares Outstanding: {finance[0].sharesOutstanding}</h3>
+                    <h3>Volume: {finance[0].volume}</h3>
+                    <h3>Year High: {finance[0].yearHigh}</h3>
+                    <h3>Year Low: {finance[0].yearLow}</h3>
                 </div>
 
                 <div className='stockSearchNews'>
-                    <div>
-                    <h2 className='newsTitle'>{news[0].title}</h2>
-                    <h3>{news[0].site}, {news[0].publishedDate}, {news[0].symbol}</h3>
-                    <img src={news[0].image}></img>
+                    <div className='newsStory'>
+                        <a href={news[0].url}target='_blank' className='alink'>
+                            <h2 className='newsTitle'>{news[0].title}</h2>
+                            <h3>{news[0].site}, {news[0].publishedDate}, {news[0].symbol}</h3>
+                            <img src={news[0].image}></img>
+                        </a>
                     </div>
 
-                    <div>
-                    <h2 className='newsTitle'>{news[1].title}</h2>
-                    <h3>{news[1].site}, {news[1].publishedDate}, {news[1].symbol}</h3>
-                    <img src={news[1].image}></img>
+                    <div className='newsStory'>
+                        <a href={news[1].url}target='_blank' className='alink'>
+                            <h2 className='newsTitle'>{news[1].title}</h2>
+                            <h3>{news[1].site}, {news[1].publishedDate}, {news[1].symbol}</h3>
+                            <img src={news[1].image}></img>
+                        </a>
                     </div>
 
-                    <div>
-                    <h2 className='newsTitle'>{news[2].title}</h2>
-                    <h3>{news[2].site}, {news[2].publishedDate}, {news[2].symbol}</h3>
-                    <img src={news[2].image}></img>
+                    <div className='newsStory'>
+                        <a href={news[2].url}target='_blank' className='alink'>
+                            <h2 className='newsTitle'>{news[2].title}</h2>
+                            <h3>{news[2].site}, {news[2].publishedDate}, {news[2].symbol}</h3>
+                            <img src={news[2].image}></img>
+                        </a>
                     </div>
 
-                    <div>
-                    <h2 className='newsTitle'>{news[3].title}</h2>
-                    <h3>{news[3].site}, {news[3].publishedDate}, {news[3].symbol}</h3>
-                    <img src={news[3].image}></img>
+                    <div className='newsStory'>
+                        <a href={news[3].url}target='_blank' className='alink'>
+                            <h2 className='newsTitle'>{news[3].title}</h2>
+                            <h3>{news[3].site}, {news[3].publishedDate}, {news[3].symbol}</h3>
+                            <img src={news[3].image}></img>
+                        </a>
+
                     </div>
                 </div>
                    
