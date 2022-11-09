@@ -285,3 +285,7 @@ html{
 .newsTitle{
     height: 2em;
 }
+.stockPercentClass{
+    display: flex;
+
+}
