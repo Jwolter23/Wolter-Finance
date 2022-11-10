@@ -88,7 +88,7 @@
 }
 
 .storyTitle{
-    height: 2em;
+    height: 2.5em;
     font-family: 'Playfair Display', serif;
 }
 
@@ -134,11 +134,10 @@
 .ipoColumn{
     grid-column: 3;
     grid-row: 2;
-    height: 1em;
+    height: 35em;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
-    
+
 }
 .ipoTitle{
     grid-column: 1;
@@ -198,6 +197,7 @@
    grid-row: 1;
    grid-column: 1 / span 2;
    font-family: 'Playfair Display', serif;
+  
 }
 .storyInfo1{
     grid-column: 1;
