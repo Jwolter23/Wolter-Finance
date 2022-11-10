@@ -188,7 +188,8 @@
 }
 .storyText{
     color: black;
-    padding: 0em  1em;
+    padding: 0 1em;
+    margin-top: -0.5em;
     font-family: 'PT Serif', serif;
     
     
