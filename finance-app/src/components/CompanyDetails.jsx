@@ -8,31 +8,8 @@ const CompanyDetails = (props) => {
 
     let { index } = useParams()
 
-    
-
-    // const [exec, setExec] =useState(null)
-
- 
-    // useEffect(() => {
-        
-    //     const getExec = async () => {
-    //     const response4 = await axios.get(`https://financialmodelingprep.com/api/v3/key-executives/${selectedCompany}?apikey=91c950cb2afdc944512490e8ae2113cc
-    //     `)
-        
-    //     console.log(response4.data)
-    
-    //     setExec(response4.data)
-  
-    //     }
-    //     getExec()
-    // }, [])
-
-
-
-
     const [companyDetail, setCompanyDetail] = useState('')
 
-    
 
     useEffect(() => {
         let selectedCompany = props.company[index]
@@ -52,12 +29,7 @@ const CompanyDetails = (props) => {
             <h3>Employees: {companyDetail.fullTimeEmployees}</h3>
             </div>
             <h3>{companyDetail.description}</h3>
-           
 
-            {/* <h3>Market Cap: {companyDetail.mktCap}</h3>
-            <h3>Current Price: {companyDetail.price}</h3>
-            <h3>Range: {companyDetail.range}</h3> */}
-            
         </div>
         <div className='backButtonWrap'>
                 <button className='backButton'><Link to='/company'>Back</Link></button>

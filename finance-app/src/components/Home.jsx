@@ -11,8 +11,6 @@ export default function Home () {
         const getHome = async () => {
         const response = await axios.get(`https://financialmodelingprep.com/api/v3/stock_news?limit=25&apikey=${process.env.REACT_APP_FMP_KEY}`)
         
-        console.log(response.data)
-        
         setHome(response.data)
 
        
@@ -29,7 +27,6 @@ export default function Home () {
         const getSector = async () => {
         const response = await axios.get(`https://financialmodelingprep.com/api/v3/sector-performance?apikey=${process.env.REACT_APP_FMP_KEY}`)
        
-        console.log(response.data)
         setSector(response.data)
         }
         getSector()
@@ -46,8 +43,7 @@ export default function Home () {
        
         const getIPO = async () => {
         const response = await axios.get(`https://financialmodelingprep.com/api/v3/ipo_calendar?from=2022-11-01&to=2022-12-31&apikey=${process.env.REACT_APP_FMP_KEY}`)
-       
-        console.log(response.data)
+
         setIPO(response.data)
         }
         getIPO()
@@ -55,13 +51,6 @@ export default function Home () {
 
     }, [])
 
-    
-   
- 
-    //we need to see the data
-    //also create a guard operator
-    //so if data takes a few seconds 
-    //site doesnt break
 
     if (!Home || !sector || !ipo) {
         return <h2> Loading please wait</h2>

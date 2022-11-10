@@ -17,9 +17,9 @@ export default function Finance (props) {
         setFinance(response.data)
 
         
-
-        }
         // setInterval(getFinance, 5000)
+        }
+        
         
       
     const [news, setNews] =useState(null)
