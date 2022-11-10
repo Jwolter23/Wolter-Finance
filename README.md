@@ -10,11 +10,11 @@
 - API (https://site.financialmodelingprep.com/developer/docs/#FMP-Articles)
 - The inspiration for my project comes from Yahoo Finance, and while there are certainly similarities Wolter Finance has it's own twist.
 - Users will be greeted on our landing page which will show four tabs each leading to different parts our our website.
-- Home tab will take them to current financial news stories. Ranging from crypto, housing market, currency exchange, interest rates etc.
-- Company Overview tab will take users to a page of the top 25 companies by market cap in the united states. Here users will be able to click on said company and gather futher information.
-- Stocks tab will bring users to a fairly empty screen with a search bar and prompts on the side. Users will be able to type in the search bar a company tiker and gather information on the companies stock.
-- The stocks tab will have various options such as intraday, daily, weekly, monthly, and year information about a companies stock.
-- Crypto tab will be very similar to the stocks tab. This may become a stretch goal but should operate in very similar ways to the stocks tab.
+- Home tab will take them to current financial news stories. Ranging from stocks, company information, activity and more. This will also show updated market and sector information that updates in real time.
+- Company Overview tab will take users to a page of the top 30 companies by market cap in the united states. Here users will be able to click on said company and gather futher information.
+- Stock Search tab will bring users to a fairly empty screen with a search bar and prompts on the side. Users will be able to type in the search bar a company tiker and gather information on the companies stock.
+- The Stock Search tab will have various options such as Price, P.E, Volume etc. and year information about a companies stock.
+- The Activity tab will show the days largest gainers, losers and most active which is based on volume.
 
 ## Styling
 

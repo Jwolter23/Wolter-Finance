@@ -75,7 +75,7 @@ export default function Finance (props) {
                     <h3>Day High: {finance[0].dayHigh}</h3>
                     <h3>Day Low: {finance[0].dayLow}</h3>
                     <h3>EPS: {finance[0].eps}</h3>
-                    
+                    <h3>PE: {finance[0].pe}</h3>
                     <h3>Shares Outstanding: {finance[0].sharesOutstanding}</h3>
                     <h3>Volume: {finance[0].volume}</h3>
                     <h3>Year High: {finance[0].yearHigh}</h3>

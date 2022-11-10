@@ -31,7 +31,7 @@ export default function Home () {
         }
         getSector()
 
-      //   setInterval(getSector, 5000)
+      //   setInterval(getSector, 3000)
 
     }, [])
 
