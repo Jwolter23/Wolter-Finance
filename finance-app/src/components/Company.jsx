@@ -27,7 +27,7 @@ const Company = (props) => {
             <div key={index}
                     className='companyNames'>
             <h2 className="CompanyTitle" onClick={() => showComp(index)} ><img src={com.image} className='borderImg'></img> </h2>
-            {/* <h4>{com.symbol}</h4> */}
+          
             
             
         
