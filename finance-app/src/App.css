@@ -43,7 +43,7 @@
 
 
 .companyNames{
-    border: 2px solid black;
+    border: 2px solid #46686E;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -72,7 +72,7 @@
     overflow-y: scroll;
     gap: 25px;
     margin-top: 25px;
-    border: 1px solid black;
+    border: 1px solid #46686E;
     justify-content: center;
     justify-content: space-around;
     
@@ -83,6 +83,7 @@
     grid-template-columns: 33.33% 33.33% 33.33%;
     gap: 1em;
     padding: 2em;
+    border: 2px solid #46686E;
     
 }
 
@@ -105,6 +106,7 @@
     grid-column: 3;
     grid-row: 1 ;
     margin-bottom: 30px;
+    
 }
 .sectorTitle{
     text-align: center;
@@ -325,7 +327,7 @@ html{
 }
 .gainerDiv{
     grid-column: 1;
-    border: 2px solid black;
+    border: 2px solid #46686E;
     display: flex;
     flex-direction: column;
     padding-left: 1em;
@@ -335,7 +337,7 @@ html{
 }
 .loserDiv{
     grid-column: 2;
-    border: 2px solid black;
+    border: 2px solid #46686E;
     display: flex;
     flex-direction: column;
     height: 50em;
@@ -345,7 +347,7 @@ html{
 }
 .activeDiv{
     grid-column: 3;
-    border: 2px solid black;
+    border: 2px solid #46686E;
     display: flex;
     flex-direction: column;
     padding-left: 1em;
