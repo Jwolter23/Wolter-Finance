@@ -10,7 +10,7 @@ export default function Nav () {
         const getMarket = async () => {
         const response = await axios.get(`https://financialmodelingprep.com/api/v3/quotes/index?apikey=${process.env.REACT_APP_FMP_KEY}`)
        
-        console.log(response.data)
+        
         setMarket(response.data)
         }
         getMarket()

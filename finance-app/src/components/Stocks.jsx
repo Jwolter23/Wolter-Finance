@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export default function Stocks () {
 
-    //create a state for our data 
+    //Functions for sorting
 
     let beta = () => {
         setGainer([...gainer].sort((a, b) => a.change > b.change ? 1 : -1 ))
@@ -24,17 +24,15 @@ export default function Stocks () {
 
 
     const [gainer, setGainer] =useState(null)
-    //we need to call an axios function
+    
     useEffect(() => {
         
         const getGainer = async () => {
         const response9 = await axios.get(`https://financialmodelingprep.com/api/v3/stock_market/gainers?apikey=${process.env.REACT_APP_FMP_KEY}`)
-        
-
-         //we need to set state of our data
-         console.log(response9.data)
+  
+         
         setGainer(response9.data)
-        console.log(gainer)
+       
 
         }
         getGainer()
@@ -46,15 +44,13 @@ export default function Stocks () {
 
 
     const [loser, setLoser] =useState(null)
-    //we need to call an axios function
+  
     useEffect(() => {
         
         const getLoser = async () => {
         const response8 = await axios.get(`https://financialmodelingprep.com/api/v3/stock_market/losers?apikey=${process.env.REACT_APP_FMP_KEY}`)
-        
-
-         //we need to set state of our data
-         console.log(response8.data)
+ 
+         
         setLoser(response8.data)
         
 
@@ -74,7 +70,6 @@ export default function Stocks () {
         const response7 = await axios.get(` https://financialmodelingprep.com/api/v3/stock_market/actives?apikey=${process.env.REACT_APP_FMP_KEY}`)
         
 
-         console.log(response7.data)
         setActive(response7.data)
         
 
@@ -85,16 +80,6 @@ export default function Stocks () {
     }, [])
 
 
-
-
-
-   
-   
-
-    //we need to see the data
-    //also create a guard operator
-    //so if data takes a few seconds 
-    //site doesnt break
 
     if (!gainer || !loser || !active) {
         return <h2> Loading please wait</h2>
@@ -112,8 +97,8 @@ export default function Stocks () {
                 <h1 className='largeGain'>Largest Gainers</h1>
                 
                 {
-                    gainer.map((gain) => (
-                        <div>
+                    gainer.map((gain, index) => (
+                        <div key={index}>
                             
                            <h2> {gain.name} </h2> <h5>{gain.symbol}</h5>
                            <div className='gainPricePer'>
@@ -137,7 +122,7 @@ export default function Stocks () {
                     
                 {
                     loser.map((lose) => (
-                        <div>
+                        <div key={lose.symbol}>
                             <h2>{lose.name}</h2> <h5>{lose.symbol}</h5>
                             <div className='losePricePer'>
                             <h4 >${lose.price}</h4> 
@@ -153,7 +138,7 @@ export default function Stocks () {
                 <h1 className='largeGain'>Most Active</h1>
                 {
                     active.map((act) => (
-                        <div>
+                        <div key={act.name}>
                             <h2>{act.name}</h2> <h5>{act.symbol}</h5>
                             <div className='activePricePer'>
                             <h4>${act.price}</h4> 

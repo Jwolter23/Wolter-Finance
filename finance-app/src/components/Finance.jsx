@@ -4,33 +4,30 @@ import axios from 'axios'
 
 export default function Finance (props) {
 
-    //create a state for our data 
+  
 
     const [finance, setFinance] =useState(null)
     
    
 
-
-    //we need to call an axios function
-   
-
     const getFinance = async () => {
         const response = await axios.get(`https://financialmodelingprep.com/api/v3/quote/${props.formState.search.toUpperCase()}?apikey=${process.env.REACT_APP_FMP_KEY}`)
-        console.log(response.data)
-         //we need to set state of our data
+        
+         
         setFinance(response.data)
 
         
 
         }
         // setFinance(getFinance, 5000)
+        
       
     const [news, setNews] =useState(null)
 
     const getNews = async () => {
         const response1 = await axios.get(`https://financialmodelingprep.com/api/v3/stock_news?tickers=${props.formState.search.toUpperCase()}&limit=10&apikey=${process.env.REACT_APP_FMP_KEY}`)
-        console.log(response1.data)
-         //we need to set state of our data
+        
+         
         setNews(response1.data)
 
         }
@@ -84,7 +81,7 @@ export default function Finance (props) {
                             <a href={news[0].url}target='_blank' className='alink'>
                                 <h2 className='newsTitle'>{news[0].title}</h2>
                                 <h3>{news[0].site}, {news[0].publishedDate}, {news[0].symbol}</h3>
-                                <img src={news[0].image}></img>
+                                <img className='newsIMG'src={news[0].image}></img>
                             </a>
                         </div>
     
@@ -92,7 +89,7 @@ export default function Finance (props) {
                             <a href={news[1].url}target='_blank' className='alink'>
                                 <h2 className='newsTitle'>{news[1].title}</h2>
                                 <h3>{news[1].site}, {news[1].publishedDate}, {news[1].symbol}</h3>
-                                <img src={news[1].image}></img>
+                                <img className='newsIMG' src={news[1].image}></img>
                             </a>
                         </div>
     
@@ -100,7 +97,7 @@ export default function Finance (props) {
                             <a href={news[2].url}target='_blank' className='alink'>
                                 <h2 className='newsTitle'>{news[2].title}</h2>
                                 <h3>{news[2].site}, {news[2].publishedDate}, {news[2].symbol}</h3>
-                                <img src={news[2].image}></img>
+                                <img className='newsIMG' src={news[2].image}></img>
                             </a>
                         </div>
     
@@ -108,7 +105,7 @@ export default function Finance (props) {
                             <a href={news[3].url}target='_blank' className='alink'>
                                 <h2 className='newsTitle'>{news[3].title}</h2>
                                 <h3>{news[3].site}, {news[3].publishedDate}, {news[3].symbol}</h3>
-                                <img src={news[3].image}></img>
+                                <img className='newsIMG' src={news[3].image}></img>
                             </a>
                         </div>
                     </div>
@@ -151,7 +148,7 @@ export default function Finance (props) {
                         <a href={news[0].url}target='_blank' className='alink'>
                             <h2 className='newsTitle'>{news[0].title}</h2>
                             <h3>{news[0].site}, {news[0].publishedDate}, {news[0].symbol}</h3>
-                            <img src={news[0].image}></img>
+                            <img className='newsIMG' src={news[0].image}></img>
                         </a>
                     </div>
 
@@ -159,7 +156,7 @@ export default function Finance (props) {
                         <a href={news[1].url}target='_blank' className='alink'>
                             <h2 className='newsTitle'>{news[1].title}</h2>
                             <h3>{news[1].site}, {news[1].publishedDate}, {news[1].symbol}</h3>
-                            <img src={news[1].image}></img>
+                            <img className='newsIMG' src={news[1].image}></img>
                         </a>
                     </div>
 
@@ -167,7 +164,7 @@ export default function Finance (props) {
                         <a href={news[2].url}target='_blank' className='alink'>
                             <h2 className='newsTitle'>{news[2].title}</h2>
                             <h3>{news[2].site}, {news[2].publishedDate}, {news[2].symbol}</h3>
-                            <img src={news[2].image}></img>
+                            <img className='newsIMG' src={news[2].image}></img>
                         </a>
                     </div>
 
@@ -175,7 +172,7 @@ export default function Finance (props) {
                         <a href={news[3].url}target='_blank' className='alink'>
                             <h2 className='newsTitle'>{news[3].title}</h2>
                             <h3>{news[3].site}, {news[3].publishedDate}, {news[3].symbol}</h3>
-                            <img src={news[3].image}></img>
+                            <img className='newsIMG'src={news[3].image}></img>
                         </a>
 
                     </div>

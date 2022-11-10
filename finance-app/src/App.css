@@ -284,9 +284,13 @@ html{
 .stockSearchNews{
     display: grid;
     grid-template-columns: 50% 50%;
-    gap: 0 4em;
+    gap: 0 2em;
     
     margin: 0 1em;
+}
+
+.newsIMG{
+    width: 100%;
 }
 
 .newsStory{
@@ -338,10 +342,7 @@ html{
     overflow-y: scroll;
    
 }
-/* .gainerDiv, .loserDiv, .activeDiv{
-    height: 320em;
-    overflow-y: scroll;
-} */
+
 .gainPricePer{
     display: flex;
     gap: 1em;
