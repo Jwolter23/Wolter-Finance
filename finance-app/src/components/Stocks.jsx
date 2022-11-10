@@ -37,7 +37,7 @@ export default function Stocks () {
         }
         getGainer()
 
-        // setGainer(getGainer, 5000)
+        // setInterval(getGainer, 5000)
 
     }, [])
     
@@ -57,7 +57,7 @@ export default function Stocks () {
         }
         getLoser()
 
-        // setLoser(getLoser, 5000)
+        // setInterval(getLoser, 5000)
     }, [])
 
 
@@ -76,7 +76,7 @@ export default function Stocks () {
         }
         getActive()
 
-        // setActive(getActive, 5000)
+        // setInterval(getActive, 5000)
     }, [])
 
 

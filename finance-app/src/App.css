@@ -83,7 +83,6 @@
     gap: 1em;
     padding: 2em;
     
-  
 }
 
 .storyTitle{
@@ -129,9 +128,11 @@
 .ipoColumn{
     grid-column: 3;
     grid-row: 2;
-    height: 2em;
+    height: 1em;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    
+    
 }
 .ipoTitle{
     grid-column: 1;
@@ -142,9 +143,12 @@
     grid-row: 2;
 }
 
+
+
 .alink{
     text-decoration: none;
     color: black;
+   
     
 
 }
@@ -285,8 +289,7 @@ html{
     display: grid;
     grid-template-columns: 50% 50%;
     gap: 0 2em;
-    
-    margin: 0 1em;
+    margin: 0 4em;
 }
 
 .newsIMG{

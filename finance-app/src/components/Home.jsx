@@ -182,7 +182,7 @@ export default function Home () {
                   </div>
                   
                      
-                     <div className='ipoColumn'>
+            <div className='ipoColumn'>
                         <h1 className='ipoTitle'>Upcoming IPO's</h1>
 
                         <div className='ipo1'>
@@ -216,7 +216,7 @@ export default function Home () {
                         </div>
                         
                      
-                  </div>
+            </div>
 
          </div> 
        
