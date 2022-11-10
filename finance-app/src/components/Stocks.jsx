@@ -88,20 +88,28 @@ export default function Stocks () {
             
             <div className='activityGrid'>
                 
-                <div className='gainerDiv'>
-                    <div className='sortingButtonDiv'>
+                  <div className='sortingButtonDiv1'>
                 <button className='sortingButton' onClick={beta}>Smallest to Largest %</button>
                 <button className='sortingButton' onClick={charlie}>Largest to Smallest %</button>
+                </div>
+                <div className='sortingButtonDiv'>
+                <button className='sortingButton' onClick={delta}>Largest to Smallest %</button>
+                <button className='sortingButton' onClick={gamma}>Smallest to Largest %</button>
                     </div>
-
+                
+                    
+                
+                <div className='gainerDiv'>
+                  
                 <h1 className='largeGain'>Largest Gainers</h1>
                 
                 {
                     gainer.map((gain, index) => (
                         <div key={index}>
                             
-                           <h2> {gain.name} </h2> <h5>{gain.symbol}</h5>
-                           <div className='gainPricePer'>
+                           <h2 className='activeName'> {gain.name} </h2> 
+                           <h5 className='activeSymbol'>{gain.symbol}</h5>
+                           <div className='activePricePer'>
                             <h4> ${gain.price} </h4> 
                             <h4 className={gain.change.toString().includes('-') ? 'negative' : 'positive'}> {gain.change}% </h4>
                             </div>
@@ -112,19 +120,16 @@ export default function Stocks () {
                     
                 }
                 </div>
-                <div className='loserDiv'>
-                    <div className='sortingButtonDiv'>
-                <button className='sortingButton' onClick={delta}>Largest to Smallest %</button>
-                <button className='sortingButton' onClick={gamma}>Smallest to Largest %</button>
-                    </div>
 
-                <h1 className='largGain'>Largest Losers</h1>
+                <div className='loserDiv'>
+                <h1 className='largeGain'>Largest Losers</h1>
                     
                 {
                     loser.map((lose) => (
                         <div key={lose.symbol}>
-                            <h2>{lose.name}</h2> <h5>{lose.symbol}</h5>
-                            <div className='losePricePer'>
+                            <h2 className='activeName'>{lose.name}</h2> 
+                            <h5 className='activeSymbol'>{lose.symbol}</h5>
+                            <div className='activePricePer'>
                             <h4 >${lose.price}</h4> 
                             <h4 className={lose.change.toString().includes('-') ? 'negative' : 'positive'}>{lose.change}%</h4>
                             </div>
@@ -139,7 +144,8 @@ export default function Stocks () {
                 {
                     active.map((act) => (
                         <div key={act.name}>
-                            <h2>{act.name}</h2> <h5>{act.symbol}</h5>
+                            <h2 className='activeName'>{act.name}</h2> 
+                            <h5 className='activeSymbol'>{act.symbol}</h5>
                             <div className='activePricePer'>
                             <h4>${act.price}</h4> 
                             <h4 className={act.change.toString().includes('-') ? 'negative' : 'positive'}>{act.change}%</h4>
@@ -148,6 +154,7 @@ export default function Stocks () {
                     ))
                 }
                 </div>
+                
             </div>
 
                 

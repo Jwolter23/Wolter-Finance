@@ -5,8 +5,9 @@
 }
 .wolterHeader{
     text-align: center;
-    font-family: 'Aleo', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 2em;
+    text-transform: uppercase;
 }
 
 .story0:hover,.story1:hover,.story2:hover,.story3:hover,.story4:hover,.story5:hover{
@@ -19,7 +20,7 @@
     color: black;
     display: flex;
     justify-content: space-around;
-    font-family: 'Aleo', serif;
+    font-family: 'Playfair Display', serif;
     
     
 }
@@ -55,7 +56,7 @@
 .companyNames:hover{
     cursor: pointer;
     color: #46686E;
-    background-color: #A9B194;
+    background-color: #D0CAB2;
     transform: scale(1.1);
     box-shadow: 34px 27px 18px -3px rgba(0,0,0,0.2);
 
@@ -87,6 +88,7 @@
 
 .storyTitle{
     height: 2em;
+    font-family: 'Playfair Display', serif;
 }
 
 .storyImg{
@@ -96,6 +98,7 @@
 .storyInfo{
     height: 1em;
     margin-top: 3em;
+    font-family: 'PT Serif', serif;
 }
 
 .sectorReport{
@@ -106,6 +109,7 @@
 .sectorTitle{
     text-align: center;
     text-decoration: underline;
+    font-family: 'Playfair Display', serif;
    
 }
 
@@ -136,7 +140,9 @@
 }
 .ipoTitle{
     grid-column: 1;
-    grid-row: 1 / span 2;
+    grid-row: 1;
+    font-family: 'Playfair Display', serif;
+    text-decoration: underline;
 }
 .ipo1{
     grid-column: 1;
@@ -182,15 +188,18 @@
 .storyText{
     color: black;
     padding: 0em  1em;
+    font-family: 'PT Serif', serif;
     
     
 }
 .storyTitle1{
    grid-row: 1;
    grid-column: 1 / span 2;
+   font-family: 'Playfair Display', serif;
 }
 .storyInfo1{
     grid-column: 1;
+    font-family: 'PT Serif', serif;
 
 }
 .storyImg1{
@@ -210,6 +219,7 @@
 }
 .sectorTitleChange{
     margin-right: 10px;
+    font-family: 'PT Serif', serif;
 }
 
 .markets{
@@ -217,6 +227,7 @@
     justify-content: space-around;
     background-color: #D0CAB2;
     margin-top: 10px;
+    font-family: 'PT Serif', serif;
 }
 html{
     background-color: #f3e5d4;
@@ -227,13 +238,7 @@ html{
     bottom: 0;
     
 }
-.sortListA{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-    
-}
+
 .sortListA:hover{
  cursor: pointer;
  background-color: #A9B194;
@@ -259,6 +264,7 @@ html{
 .compDetailTitle{
     display: flex;
     justify-content: center;
+    font-family: 'Playfair Display', serif;
 }
 .compDetailImg{
     display: flex;
@@ -306,6 +312,7 @@ html{
 }
 .stockPercentClass{
     display: flex;
+    justify-content: center;
 
 }
 .activityGrid{
@@ -324,6 +331,7 @@ html{
     padding-left: 1em;
     height: 50em;
     overflow-y: scroll;
+    margin-top: -1.5em;
 }
 .loserDiv{
     grid-column: 2;
@@ -332,8 +340,8 @@ html{
     flex-direction: column;
     height: 50em;
     overflow-y: scroll;
-   
     padding-left: 1em;
+    margin-top: -1.5em;
 }
 .activeDiv{
     grid-column: 3;
@@ -343,6 +351,7 @@ html{
     padding-left: 1em;
     height: 50em;
     overflow-y: scroll;
+    margin-top: -1.5em;
    
 }
 
@@ -358,6 +367,7 @@ html{
 .activePricePer{
     display: flex;
     gap: 1em;
+    font-size: 1.1em;
 }
 
 .stockPercentClass{
@@ -367,17 +377,20 @@ html{
 .priceDiv{
     display: flex;
     gap: 0.5em;
+    margin-bottom: -2em;
+   justify-content: center;
 }
 .compExchange{
     display: flex;
     justify-content: center;
     margin-top: -1em;
     margin-bottom: 3em;
+    font-family: 'Playfair Display', serif;
 }
 .bulkInfo{
     display: flex;
     justify-content: space-around;
-    
+    font-family: 'Playfair Display', serif;
     margin-bottom: -1em;
     margin-top: 0.5em;
 }
@@ -391,6 +404,11 @@ html{
     width: 8em;
     background-color: #D0CAB2;
     cursor: pointer;
+    border: 1px solid #46686E;
+    
+}
+.sortingButton:hover{
+    background-color: #cabf92;
 }
 .sortingButtonDiv{
     display: flex;
@@ -398,4 +416,59 @@ html{
     padding: 1em;
     justify-content: space-around;
     
+    
+}
+.sortingButtonDiv1{
+    display: flex;
+    gap: 2em;
+    padding: 1em;
+    justify-content: space-around;
+    
+}
+.buttonHolderComp{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -1.5em;
+    margin-right: 68em;
+    margin-top: 2em;
+    
+}
+.sortListA{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    background-color: #D0CAB2;
+    border: 1px solid #46686E;
+    border-radius: 20%;
+
+   
+}
+.largeGain{
+    font-family: 'Playfair Display', serif;
+    text-decoration: underline;
+}
+.compDescript{
+    font-family: 'PT Serif', serif;
+    
+}
+.financeName{
+    font-family: 'Playfair Display', serif;
+    margin-bottom: -0.5em;
+    display: flex;
+    justify-content: center;
+}
+.exchangeFinance{
+    display: flex;
+    justify-content: center;
+}
+
+.activeName{
+    font-family: 'Playfair Display', serif;
+    margin-bottom: -1em;
+}
+.activeSymbol{
+    font-family: 'PT Serif', serif;
+    margin-bottom: -0.5em;
+    font-size: 1em;
 }

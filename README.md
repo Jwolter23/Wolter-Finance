@@ -5,6 +5,7 @@
 ## General Overview
 
 - Wolter Finacne is going to be a financial app that allows users to keep up to date on finances across the United States.
+- Link provided here (https://wolterfinance.netlify.app/)
 - To begin and get all my information, I plan on using the Financial Modeling Prep API which can be accessed from the link below.
 - API (https://site.financialmodelingprep.com/developer/docs/#FMP-Articles)
 - The inspiration for my project comes from Yahoo Finance, and while there are certainly similarities Wolter Finance has it's own twist.
@@ -36,6 +37,12 @@
 - My biggest ambition for the project is going to see if I can get my data to update live in specific sections. An example of this would have the intraday trading for stocks be updated every one minute using the given info from the API.
 - Getting the sliding bar across the title screen would be a great animation to have and show off trending stocks.
 - Getting charts to show accurate data in my stocks section.
+
+## Contribution Guidelines
+
+- Currently there are very few active bugs in the program.
+- If there is interest in contributing to this program fork the repo from GitHub and the clone it into your terminal.
+- From there users are free to make changes as they see fit and can submit pull requests.
 
 ## Wireframe
 

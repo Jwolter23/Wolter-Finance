@@ -14,8 +14,10 @@ const Company = (props) => {
     } else {
     
     return (
-      <div>  
+      <div>
+        <div className='buttonHolderComp'>  
         <button onClick={props.alph} className='sortListA'>Sort List A to Z</button>
+        </div>
     <div className='gridAlign'>
         
         <div className="grid">

@@ -28,7 +28,7 @@ const CompanyDetails = (props) => {
             <h3>{companyDetail.sector}</h3>
             <h3>Employees: {companyDetail.fullTimeEmployees}</h3>
             </div>
-            <h3>{companyDetail.description}</h3>
+            <h3 className='compDescript'>{companyDetail.description}</h3>
 
         </div>
         <div className='backButtonWrap'>
