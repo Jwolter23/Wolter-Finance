@@ -30,6 +30,7 @@
 - With this API using axios and react is really how we are going to combine all the information recieved and rendered on screen.
 - Utilizing componenets to keep our information seperate is also going to be extremley important.
 - As of now there will be four seperate components that were listed above in the General Overview section.
+- setInterval was a great resource to give some life to my website and bring functionality to it.
 - Javascript, and CSS will of course be used as well to add functionality to our app and style it.
 
 ## Post MVP
