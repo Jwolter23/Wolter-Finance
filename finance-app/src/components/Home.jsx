@@ -109,10 +109,10 @@ export default function Home () {
                   <div className='sectorReport'>
                      <h1 className='sectorTitle'>Daily Sector Report</h1>
 
-                     <div className='sector11'>
+                     {/* <div className='sector11'>
                         <h3 className='sectorTitleChange'>{sector[11].sector}:</h3> 
                         <h3 className={sector[11].changesPercentage.includes('-') ? 'negative' : 'positive'}>{sector[11].changesPercentage}</h3>
-                     </div>
+                     </div> */}
                      
                      <div className='sector11'>
                         <h3 className='sectorTitleChange'>{sector[7].sector}: </h3>
